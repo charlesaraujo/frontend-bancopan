@@ -25,7 +25,7 @@ Nosso teste consiste em codificar uma interface baseado nas imagens a baixo:
   - Descrição sobre as tecnologias utilizadas no projeto
 - Design responsivo
 - Use endpoint a seguir para pegar os dados iniciais dos usuários.
-  - https://private-56d1e-charlesaraujodasilva.apiary-mock.com/users
+  - GET: https://private-56d1e-charlesaraujodasilva.apiary-mock.com/users
 - Utilize os cookies ou localstorage como banco de dados.
 - Deve conter cadastro e remoção de usuário, edição é opcional.
 - Pelo menos uma estratégia para organização do CSS
