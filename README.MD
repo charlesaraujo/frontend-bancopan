@@ -29,12 +29,11 @@ Nosso teste consiste em codificar uma interface baseado nas imagens a baixo:
 - Utilize os cookies ou localstorage como banco de dados.
 - Deve conter cadastro e remoção de usuário, edição é opcional.
 - Pelo menos uma estratégia para organização do CSS
-- Testes
 
 ### Você pode
 
 - Utilizar qualquer framework JS moderno (Angular, React, Vue...)
-- Utilizar bibliotecas para o gerenciamento de estado (NGRX Redux, Vuex...)
+- Utilizar bibliotecas para o gerenciamento de estado (NGRX, Redux, Vuex...)
 - Utilizar pré ou pós-processadores de CSS, bem como frameworks e/ou starterpacks (Sass, PostCSS, CSS Modules, Styled Components...)
 - Alterar a proposta do layout caso necessário
 
