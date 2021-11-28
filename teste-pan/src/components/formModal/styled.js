@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const ModalWrapper = styled.div`
-    display: ${({show}) => (show ? 'block' : 'none')};
     position: fixed;
     top: 0;
     left: 0;

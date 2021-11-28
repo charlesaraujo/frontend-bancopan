@@ -33,7 +33,7 @@ const UserProvider = ({ children }) => {
     <AppContext.Provider
       value={{
         users,
-        loading
+        loading,
       }}
     >
       {children}
