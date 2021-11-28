@@ -1,6 +1,16 @@
 import { createGlobalStyle } from 'styled-components';
  
 const GlobalStyle = createGlobalStyle`
+  :root{
+    --main-color: #03A9F4;
+    --secondary-color: #EB4A46;
+
+    --heading1-size: 2em;
+    --heading2-size: 1.5em;
+    --paragraph-size: 1.2em;
+  }
+
+
   html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
   a, abbr, acronym, address, big, cite, code,
