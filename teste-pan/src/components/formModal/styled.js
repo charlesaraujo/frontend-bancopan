@@ -9,7 +9,7 @@ export const ModalWrapper = styled.div`
     background: rgba(0, 0, 0, 0.6);
 `;
 
-export const Modal = styled.div`
+export const Modal = styled.form`
     position:fixed;
     background: white;
     width: 50%;
