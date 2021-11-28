@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from "styled-media-query";
 
 export const ModalWrapper = styled.div`
     position: fixed;
@@ -18,6 +19,9 @@ export const Modal = styled.form`
     left:50%;
     transform: translate(-50%,-50%);
     border-radius: 20px;
+    ${media.lessThan("medium")`
+        width: 98%;
+    `}
 `;
 
 export const ModalHeader = styled.header`
@@ -56,10 +60,20 @@ export const ModalInput = styled.input`
         font-size: 1.2rem;
     }
 `;
-export const InputError = styled.label`
-   color: var(--secondary-color);
+export const InputLabel = styled.label`
+   color: var(--main-color);
    font-size: .8em;
-   margin: .5rem 0 2rem 0;
+   margin: 2rem 0 .5rem 0;
+   font-weight: 600;
+`;
+export const InputError = styled.label`
+   color: #fff;
+   text-align: center;
+   padding: 1rem;
+   margin-top: 1rem;
+   border-radius: 5px;
+   font-size: .8em;
+   background-color: var(--secondary-color);
    font-weight: 600;
 `;
 export const ModalFooter = styled.footer`
@@ -76,5 +90,4 @@ export const ModalButton = styled.button`
     border-radius: 50px;
     border: none;
     color: #fff;
-    border-radius: 5px;
 `;

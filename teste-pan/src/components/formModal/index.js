@@ -42,7 +42,6 @@ function FormModal({ showModal, onClose, user, userIndex }) {
     }
 
     useEffect(() => {
-        console.log(user)
         if(user != null) {
             setFormUser(user);
         }
@@ -57,10 +56,19 @@ function FormModal({ showModal, onClose, user, userIndex }) {
                     <S.ModalClose onClick={ onClose }><CloseOutline size="30" color="#fff"/></S.ModalClose>
                 </S.ModalHeader>
                 <S.ModalInputWrapper>
-                    <S.ModalInput onChange={valueInput} tabIndex="0" value={formUser.name || ""} type="text" name="name" placeholder="Nome completo (Sem abreviações)"></S.ModalInput>
-                    <S.ModalInput onChange={valueInput} tabIndex="0" value={formUser.email || ""} type="email" name="email" placeholder="Email"></S.ModalInput>
-                    <S.ModalInput onChange={valueInput} tabIndex="0" value={formUser.cpf || ""} type="text" name="cpf" placeholder="CPF"></S.ModalInput>
-                    <S.ModalInput onChange={valueInput} tabIndex="0" value={formUser.phone || ""} type="tel" name="phone" placeholder="Telefone"></S.ModalInput>
+                    <S.InputLabel htmlFor="name">Nome completo (Sem abreviações)</S.InputLabel>
+                    <S.ModalInput 
+                    onChange={valueInput} 
+                    tabIndex="0" 
+                    value={formUser.name || ""} 
+                    type="text" id="name" name="name" 
+                    ></S.ModalInput>
+                    <S.InputLabel htmlFor="email">E-mail</S.InputLabel>
+                    <S.ModalInput onChange={valueInput} tabIndex="0" value={formUser.email || ""} type="email" name="email" id="email"></S.ModalInput>
+                    <S.InputLabel htmlFor="cpf">CPF</S.InputLabel>
+                    <S.ModalInput onChange={valueInput} tabIndex="0" value={formUser.cpf || ""} type="text" name="cpf" id="cpf"></S.ModalInput>
+                    <S.InputLabel htmlFor="phone">Telefone</S.InputLabel>
+                    <S.ModalInput onChange={valueInput} tabIndex="0" value={formUser.phone || ""} type="tel" name="phone" id="phone"></S.ModalInput>
                     { formErrorMsg && <S.InputError>{ formErrorMsg }</S.InputError>}
                 </S.ModalInputWrapper>
                 <S.ModalFooter>
