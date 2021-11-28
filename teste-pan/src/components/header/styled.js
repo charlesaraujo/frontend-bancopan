@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {PlusOutline} from '@styled-icons/evaicons-outline/';
 
 export const Wrapper = styled.section`
     display: flex;
@@ -12,10 +13,16 @@ export const Title = styled.h1`
 `
 export const Button = styled.button`
     margin:  1rem 0;
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
     background-color: var(--main-color);
-    font-size: var(--paragrah-size);
-    border-radius: 20px;
+    font-size: 1.3rem;
+    border-radius: 50px;
     border: none;
-    color: #fff;    
+    color: #fff;
+    display: flex;
+`
+
+export const PlusIcon = styled(PlusOutline)`
+    margin-right: .5rem;
+    height: 1.5rem;
 `

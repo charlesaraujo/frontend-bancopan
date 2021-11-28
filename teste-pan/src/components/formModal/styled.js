@@ -71,10 +71,10 @@ export const ModalFooter = styled.footer`
 `;
 export const ModalButton = styled.button`
     margin:  1rem 0;
-    padding: .5rem 1rem;
+    padding: 1rem 2rem;
     background-color: var(--main-color);
-    font-size: var(--paragrah-size);
-    border-radius: 20px;
+    font-size: 1.3rem;
+    border-radius: 50px;
     border: none;
     color: #fff;
     border-radius: 5px;

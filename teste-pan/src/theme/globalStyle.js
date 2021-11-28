@@ -5,7 +5,7 @@ const GlobalStyle = createGlobalStyle`
     --main-color: #03A9F4;
     --secondary-color: #EB4A46;
 
-    --heading1-size: 2em;
+    --heading1-size: 2.2em;
     --heading2-size: 1.6em;
     --paragraph-size: 1em;
   }
