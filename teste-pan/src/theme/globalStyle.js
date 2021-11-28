@@ -6,8 +6,8 @@ const GlobalStyle = createGlobalStyle`
     --secondary-color: #EB4A46;
 
     --heading1-size: 2em;
-    --heading2-size: 1.5em;
-    --paragraph-size: 1.2em;
+    --heading2-size: 1.6em;
+    --paragraph-size: 1em;
   }
 
 
@@ -38,6 +38,8 @@ const GlobalStyle = createGlobalStyle`
   }
   body {
     line-height: 1;
+    background: #e2e1e0;
+    font-family: Montserrat,sans-serif;
   }
   ol, ul {
     list-style: none;
