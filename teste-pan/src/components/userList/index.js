@@ -6,7 +6,6 @@ import * as S from './styled';
 
 function UserList() {
   const { users } = useGlobalContext();
-  console.log(users)
   return <S.ListWrapper>
     {
       users.map((user) => 

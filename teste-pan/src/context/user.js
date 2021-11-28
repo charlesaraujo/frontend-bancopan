@@ -9,13 +9,19 @@ const UserProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
 
   const getUsers = async () => {
-    setLoading(true);
-    await fetch(url).then((res) => res.json())
-    .then((data) => {
-      setUsers(data)
-    }).finally(() => {
-      setLoading(false);
-    })
+    const localUsers = localStorage.getItem('users');
+    if(localUsers === null){
+      setLoading(true);
+      await fetch(url).then((res) => res.json())
+      .then((data) => {
+        setUsers(data)
+        localStorage.setItem('users', JSON.stringify(data));
+      }).finally(() => {
+        setLoading(false);
+      })
+    } else {
+      setUsers(JSON.parse(localUsers));
+    }
   } 
 
   useEffect(() => {
