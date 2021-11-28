@@ -44,5 +44,10 @@ export const CardActions = styled.div`
 `;
 
 export const Button = styled.button`
+  background-color: ${({secondary}) => (secondary ? 'var(--secondary-color)' : 'var(--main-color)')};
+  border: none;
   margin: 5px 0;
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
 `;

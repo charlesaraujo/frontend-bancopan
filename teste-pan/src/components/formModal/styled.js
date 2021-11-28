@@ -32,7 +32,8 @@ export const ModalTitle = styled.h1`
     font-weight: 500;
 `;
 export const ModalClose = styled.button`
-   
+    background-color: var(--secondary-color);
+    border: none;
 `;
 export const ModalInputWrapper = styled.div`
    padding: 2rem;
@@ -45,16 +46,22 @@ export const ModalInput = styled.input`
     border: 0;
     border-bottom: 2px solid #9e9e9e;
     outline: none;
-    transition: .2s ease-in-out;
+    transition: .5s ease-in-out;
     box-sizing: border-box;
+    padding: .5rem 0;
     &:focus {
         border-bottom: 2px solid var(--main-color);  
+    }
+    &::placeholder {
+        line-height: 3;
+        font-size: 1.2rem;
     }
 `;
 export const InputError = styled.label`
    color: var(--secondary-color);
-   font-size: .9em;
+   font-size: .8em;
    margin: .5rem 0 2rem 0;
+   font-weight: 600;
 `;
 export const ModalFooter = styled.footer`
    padding: 1.5rem;
@@ -69,5 +76,6 @@ export const ModalButton = styled.button`
     font-size: var(--paragrah-size);
     border-radius: 20px;
     border: none;
-    color: #fff;    
+    color: #fff;
+    border-radius: 5px;
 `;

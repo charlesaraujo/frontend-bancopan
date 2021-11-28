@@ -1,13 +1,14 @@
 import React from 'react';
 
 import  * as S from './styled';
+import {CloseOutline} from '@styled-icons/evaicons-outline/';
 
 function FormModal() {
-  return <S.ModalWrapper show={true}>
+  return <S.ModalWrapper show={false}>
       <S.Modal>
           <S.ModalHeader>
               <S.ModalTitle>Cadastrar usuário</S.ModalTitle>
-              <S.ModalClose>X</S.ModalClose>
+              <S.ModalClose><CloseOutline size="30" color="#fff"/></S.ModalClose>
           </S.ModalHeader>
           <S.ModalInputWrapper>
               <S.ModalInput placeholder="Input"></S.ModalInput>
