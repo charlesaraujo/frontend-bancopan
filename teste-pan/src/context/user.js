@@ -32,6 +32,14 @@ const UserProvider = ({ children }) => {
     setUsers(allUsers)
   }
 
+  const removeUser = (userIndex) => {
+    const localUsers = localStorage.getItem('users');
+    const allUsers = JSON.parse(localUsers);
+    allUsers.splice(userIndex, 1);
+    localStorage.setItem('users', JSON.stringify(allUsers));
+    setUsers(allUsers)
+  }
+
   useEffect(() => {
     getUsers();
   }, []);
@@ -42,7 +50,8 @@ const UserProvider = ({ children }) => {
       value={{
         users,
         loading,
-        addUser
+        addUser,
+        removeUser
       }}
     >
       {children}
