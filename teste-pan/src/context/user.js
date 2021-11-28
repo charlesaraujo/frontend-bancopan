@@ -22,7 +22,15 @@ const UserProvider = ({ children }) => {
     } else {
       setUsers(JSON.parse(localUsers));
     }
-  } 
+  }
+
+  const addUser = (user) => {
+    const localUsers = localStorage.getItem('users');
+    const allUsers = JSON.parse(localUsers);
+    allUsers.unshift(user);
+    localStorage.setItem('users', JSON.stringify(allUsers));
+    setUsers(allUsers)
+  }
 
   useEffect(() => {
     getUsers();
@@ -34,6 +42,7 @@ const UserProvider = ({ children }) => {
       value={{
         users,
         loading,
+        addUser
       }}
     >
       {children}

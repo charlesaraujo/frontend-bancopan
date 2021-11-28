@@ -2,8 +2,11 @@ import React, { Fragment, useEffect, useState, } from 'react';
 
 import  * as S from './styled';
 import { CloseOutline } from '@styled-icons/evaicons-outline/';
+import { useGlobalContext } from '../../context/user';
 
 function FormModal({ showModal, onClose, user }) {
+    const { addUser } = useGlobalContext();
+
     const [ formUser, setFormUser ] = useState({
         name: '',
         cpf: '',
@@ -29,7 +32,8 @@ function FormModal({ showModal, onClose, user }) {
     const saveUser = (e) => {
         e.preventDefault();
         validate();
-        
+        addUser(formUser);
+        onClose();
     }
 
     useEffect(() => {
