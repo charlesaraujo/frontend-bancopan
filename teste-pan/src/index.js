@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import { AppProvider } from './context';
 import reportWebVitals from './reportWebVitals';
 require('typeface-montserrat')
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <AppProvider>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </AppProvider>,
   document.getElementById('root')
 );
 
