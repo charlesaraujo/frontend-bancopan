@@ -4,8 +4,8 @@ import  * as S from './styled';
 import { CloseOutline } from '@styled-icons/evaicons-outline/';
 import { useGlobalContext } from '../../context/user';
 
-function FormModal({ showModal, onClose, user }) {
-    const { addUser } = useGlobalContext();
+function FormModal({ showModal, onClose, user, userIndex }) {
+    const { addUser, editUser } = useGlobalContext();
 
     const [ formUser, setFormUser ] = useState({
         name: '',
@@ -32,7 +32,12 @@ function FormModal({ showModal, onClose, user }) {
     const saveUser = (e) => {
         e.preventDefault();
         validate();
-        addUser(formUser);
+        if(user === null) {
+            addUser(formUser);
+        } else {
+            console.log(user, formUser)
+            editUser(user, formUser)
+        }
         onClose();
     }
 
@@ -59,7 +64,7 @@ function FormModal({ showModal, onClose, user }) {
                     { formErrorMsg && <S.InputError>{ formErrorMsg }</S.InputError>}
                 </S.ModalInputWrapper>
                 <S.ModalFooter>
-                    <S.ModalButton tabIndex="0" type="submit">Cadastrar usuário</S.ModalButton>
+                    <S.ModalButton tabIndex="0" type="submit">{ user ? 'Editar usuário' : 'Cadastrar usuário' }</S.ModalButton>
                 </S.ModalFooter>
             </S.Modal>
         </S.ModalWrapper>

@@ -11,7 +11,6 @@ function UserList() {
   const { users, removeUser } = useGlobalContext();
 
   const onEdit = (user) => {
-    console.log("edit", user);
     setSelectedUser(user);
     setShowModal(true);
   }

@@ -24,20 +24,30 @@ const UserProvider = ({ children }) => {
     }
   }
 
+  const updateUserList = (newList) => {
+    localStorage.setItem('users', JSON.stringify(newList));
+    setUsers(newList)
+  }
+
+  const getAllUsers = () => JSON.parse(localStorage.getItem('users'));
+
   const addUser = (user) => {
-    const localUsers = localStorage.getItem('users');
-    const allUsers = JSON.parse(localUsers);
+    const allUsers = getAllUsers();
     allUsers.unshift(user);
-    localStorage.setItem('users', JSON.stringify(allUsers));
-    setUsers(allUsers)
+    updateUserList(allUsers);
   }
 
   const removeUser = (userIndex) => {
-    const localUsers = localStorage.getItem('users');
-    const allUsers = JSON.parse(localUsers);
+    const allUsers = getAllUsers();
     allUsers.splice(userIndex, 1);
-    localStorage.setItem('users', JSON.stringify(allUsers));
-    setUsers(allUsers)
+    updateUserList(allUsers);
+  }
+
+  const editUser = (oldUser, newUser) => {
+    const allUsers = getAllUsers();
+    const userIndex = allUsers.findIndex(e => e.cpf === oldUser.cpf);
+    allUsers[userIndex] = newUser;
+    updateUserList(allUsers);
   }
 
   useEffect(() => {
@@ -51,7 +61,8 @@ const UserProvider = ({ children }) => {
         users,
         loading,
         addUser,
-        removeUser
+        removeUser,
+        editUser
       }}
     >
       {children}
