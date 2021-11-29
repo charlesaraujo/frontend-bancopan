@@ -40,7 +40,9 @@ function FormModal({ showModal, onClose, user }) {
 
     const validate = () => {
         if (!formUser.name) return setFormErrorMsg('Nome completo não pode ficar em branco!');
+        if (formUser.name.length > 35) return setFormErrorMsg('Nome completo não pode ultrapassar 35 caracteres!');
         if (!formUser.email) return setFormErrorMsg('Email não pode ficar em branco!');
+        if (formUser.email.length > 64) return setFormErrorMsg('Email não pode ultrapassar 64 caracteres!');
         if (!formUser.cpf) return setFormErrorMsg('CPF não pode ficar em branco!');
         if (formUser.cpf.length !== 14) return setFormErrorMsg('CPF inválido!');
         if (!formUser.phone) return setFormErrorMsg('Telefone não pode ficar em branco!');
