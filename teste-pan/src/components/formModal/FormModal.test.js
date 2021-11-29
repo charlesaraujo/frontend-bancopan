@@ -8,7 +8,7 @@ const customRender = (ui, {providerProps, ...renderOptions}) => {
       <UserProvider {...providerProps}>{ui}</UserProvider>,
       renderOptions,
     );
-}
+};
 
 describe('Componente: FormModal', () => {
     const providerProps = {
@@ -53,7 +53,7 @@ describe('Componente: FormModal', () => {
             phone: 'phone',
             email: 'email',
         }
-        customRender(<FormModal showModal={true} user={user}/>, {providerProps})
+        customRender(<FormModal showModal={true} user={user}/>, {providerProps});
         const editUserButton = screen.getByRole('button', { name: /editar usuário/i });
         userEvent.click(editUserButton);
         const errorNameMessage = screen.getByText('Nome completo não pode ficar em branco!');
