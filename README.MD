@@ -1,55 +1,42 @@
-<img src="https://www.bancopan.com.br/bancopan-institucional/conteudo/estrutura/assets/img/mh-icons/mh-icon--logo-desktop.svg" width="120" alt="Banco Pan">
+<p align="center">
+  <img alt="Banco Pan" src="src/assets/pan-logo.svg" width="160px">
+</p>
 
-# Front-end
+<h1 align="center">
+    <img alt="Banco Pan" src="src/assets/banco-pan.png" />
+</h1>
 
-Bem-vindo(a) ao nosso teste para desenvolvedor(a) front-end.
+<br>
 
-## Sobre o teste
+## 🧪 Tecnologias
 
-Nosso teste consiste em codificar uma interface baseado nas imagens a baixo:
+Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-#### Home
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [StyledComponents](https://styled-components.com)
+- [Axios](https://axios-http.com)
+- [React-Modals](https://github.com/reactjs/react-modal)
+- [React-Hot-Toast](https://react-hot-toast.com)
 
-<img src="layout/home.png" width="400" alt="Banco Pan">
+## 🚀 Como executar
 
-#### Cadastro
+Clone o projeto e acesse a pasta do mesmo.
 
-<img src="layout/cadastro.png" width="400" alt="Banco Pan">
+```bash
+$ git clone https://github.com/Brunoocn/frontend-bancopan.git
+$ cd frontend-bancopan
+```
 
-## Requisitos
+Para iniciá-lo, siga os passos abaixo:
+```bash
+# Instalar as dependências
+$ yarn
+# Iniciar o projeto
+$ yarn start
+```
+O app estará disponível no seu browser pelo endereço http://localhost:3000.
 
-### Requisitos obrigatórios
 
-- Documentação
-  - Instruções de instalação, inicialização e testes
-  - Descrição sobre as tecnologias utilizadas no projeto
-- Design responsivo
-- Use endpoint a seguir para pegar os dados iniciais dos usuários.
-  - GET: https://private-56d1e-charlesaraujodasilva.apiary-mock.com/users
-- Utilize os cookies ou localstorage como banco de dados.
-- Deve conter cadastro e remoção de usuário, edição é opcional.
-- Pelo menos uma estratégia para organização do CSS
 
-### Você pode
 
-- Utilizar qualquer framework JS moderno (Angular, React, Vue...)
-- Utilizar bibliotecas para o gerenciamento de estado (NGRX, Redux, Vuex...)
-- Utilizar pré ou pós-processadores de CSS, bem como frameworks e/ou starterpacks (Sass, PostCSS, CSS Modules, Styled Components...)
-- Alterar a proposta do layout caso necessário
-
-### O que gostaríamos de ver
-
-- Apesar de frameworks e libs ajudarem muito no nosso dia a dia, gostaríamos muito mais de ver o seu código em Vanilla JS
-- Testes unitários, e2e e/ou coverage
-- Uma arquitetura consistente, focada na simplicidade do projeto
-- Justifique a utilização das tecnologias adotadas - quais foram os pontos positivos e negativos que elas trouxeram?
-
-### Por fim
-
-A ideia não é prescrever uma receita exata de como o desafio deve ser resolvido. Por isso, resolva-o da forma que achar melhor. O importante para nós é entender como você codifica uma interface e seu fluxo de trabalho. Além disso, considere que estamos à disposição para qualquer dúvida!
-
-Usamos o mesmo teste para todos os níveis: **Junior**, **Pleno** e **Senior**; mas procuramos adequar nossa exigência na avaliação com cada um desses níveis.
-
-## Entrega
-
-Para enviar seu código, você deve fazer um fork deste repositório, criar uma branch com o seu nome e enviar um pull request.
