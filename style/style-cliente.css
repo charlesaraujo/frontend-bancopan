@@ -1,0 +1,125 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.cliente{
+	width: 96%;
+	padding: 15px 20px 0 20px;
+	box-sizing: border-box;
+	border: 2px solid #000000;
+	border-radius: 7px;
+	margin: 10px;
+	margin-right: 2%;
+	border: none;
+	box-shadow: 3px 3px 8px rgb(211, 205, 205);
+	background: -webkit-linear-gradient(left,rgb(3, 169, 244) 6px,  rgb(255, 255, 255) 6px);
+}
+
+.cliente li{
+	display: inline-block;
+	width: 80%;
+	vertical-align: top;
+}
+
+.name{
+	font-size: 25px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.cliente-itens{
+	display: inline-block;
+	font-size: 20px;
+	color: black;
+	font-weight: bold;
+}
+
+.cliente-dados{
+	display: inline-block;
+	font-size: 20px;
+	color: rgb(71, 71, 71);
+	margin-top: 10px;
+}
+
+.cliente-button{
+	display: inline-block ;
+}
+
+.cliente-button{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+	padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.excluir{
+	position: absolute;
+	right: 0;
+	bottom: 20px;
+	background: rgb(255, 255, 255);
+    display: block ;
+	border: none;
+	transition: 1s all;
+	cursor: pointer;
+	padding:auto ;
+}
+
+.excluir:hover{
+	transform: scale(1.1);
+}
+
+.excluir-img{
+	border-radius: 8px;
+	box-shadow: 1px 1px 5px rgb(211, 205, 205);
+}
+
+.editar{
+	position: absolute;
+	right: 0;
+	bottom: 70px;
+	background: rgb(255, 255, 255);
+    display: block ;
+	border: none;
+	transition: 1s all;
+	cursor: pointer;
+	padding:auto ;
+}
+
+.editar:hover{
+	transform: scale(1.1);
+}
+
+.editar-img{
+	border-radius: 8px;
+	box-shadow: 1px 1px 5px rgb(211, 205, 205);
+}
+
+@media screen and (max-width: 480px){
+
+	.cliente{
+		width: 100%;
+		padding: 15px 20px 0 20px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+	}
+	
+	.cliente li{
+		width: 90%;;
+		vertical-align: top;
+		margin: 0;
+	}
+	
+	.name{
+		font-size: 20px;
+		margin-bottom: 5px;
+	}
+	
+	.cliente-itens{
+		font-size: 15px;
+	}
+	
+	.cliente-dados{
+		font-size: 15px;
+	}
+}

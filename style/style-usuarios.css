@@ -1,0 +1,57 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+	background: #ffffff;
+	padding: 20px 0;
+}
+
+main{
+ padding: 10px 0 10px;
+	background: #ffffff;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.adicionar{
+    padding: 10px 0;
+	width:300px;
+	background: rgb(3, 169, 244);
+	color: rgb(255, 255, 255);
+	font-weight: bold;
+	font-size: 18px;
+	border: none;
+	border-radius: 40px;
+	transition: 1s all;
+	cursor: pointer;
+	box-shadow: 1px 1px 5px rgb(211, 205, 205);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adicionar:hover{
+	transform: scale(1.1);
+}
+
+.adicionar-labbel{
+    display: inline;
+    padding-top: -20px;
+}
+
+.adicionar-img{
+    display: inline;
+}

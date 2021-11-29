@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>cadastro</title>
+
+		<link rel="stylesheet" href="style/reset.css">
+		<link rel="stylesheet" href="style/style-usuarios.css">
+        <link rel="stylesheet" href="style/style-cliente.css">
+        <link rel="stylesheet" href="style/style-cadastro.css">
+	</head>
+    
+	<body>
+		<header>
+            <div class="cabecalho">
+
+                <h1 class="titulo">Banco Pan </h1>
+                <button id="adicionar" class="adicionar" >
+                    <p class="adicionar-labbel">Adicionar usuário</p><img class="adicionar-img" src="img/adicionar.PNG" /></button>
+        
+            </div>
+		</header>
+
+		<main id="main"></main>
+
+        <div class="overlay" style="display: none;" id="overlay"></div>
+        <form class="cadastro" style="display: none;" id="form">
+            
+            <div class="cabecalho">
+
+                <h1 class="titulo">Cadastro usuário </h1>
+                <button id="close" class="excluir" ><img class="excluir-img" src="img/excluir.PNG" /></button>
+        
+            </div>
+            
+            <div class="informacoes">
+                
+                <input type="text" id="nomesobrenome" class="input-padrao" required placeholder="Nome completo ( sem abreviação )">
+
+                <input type="email" id="email" class="input-padrao" required placeholder="E-mail">
+
+                <input type="text" id="cpf" class="input-padrao" required placeholder="CPF">
+
+                <input type="tel" id="telefone" class="input-padrao" required placeholder="Telefone">
+            
+            </div>
+            
+            <div class="enviar-wrapper">
+                <input id="cadastrar" type="submit" value="Cadastro usuário" class="enviar">
+            </div>
+            
+        </form>
+
+        <script type="text/javascript" src="usuarios.js"></script>
+
+	</body>
+    
+</html>
