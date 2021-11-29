@@ -14,9 +14,11 @@ function UserList() {
     setSelectedUser(user);
     setShowModal(true);
   }
-  const onRemove = (userIndex) => {
-    removeUser(userIndex);
-    setShowModal(false);
+  const onRemove = (user, userIndex) => {
+    if (window.confirm(`Remover ${user.name}?`)) {
+      removeUser(userIndex);
+    } 
+
   }
   const closeModal = () => {
     setShowModal(false);
@@ -26,7 +28,7 @@ function UserList() {
     <FormModal showModal={ showModal } user={ selectedUser } onClose={ closeModal }/>
     {
       users.map((user, index) => 
-        <UserCard key={index} user={user} onEdit={() => onEdit(user)} onRemove={() => onRemove(index)}></UserCard>
+        <UserCard key={index} user={user} onEdit={() => onEdit(user)} onRemove={() => onRemove(user, index)}></UserCard>
       )
     }
   </S.ListWrapper>;
