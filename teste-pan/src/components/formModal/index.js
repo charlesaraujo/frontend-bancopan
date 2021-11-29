@@ -4,7 +4,7 @@ import * as S from './styled';
 import { CloseOutline } from '@styled-icons/evaicons-outline/';
 import { useGlobalContext } from '../../context/user';
 
-function FormModal({ showModal, onClose, user, userIndex }) {
+function FormModal({ showModal, onClose, user }) {
     const { addUser, editUser } = useGlobalContext();
 
     const [formUser, setFormUser] = useState({
@@ -74,7 +74,7 @@ function FormModal({ showModal, onClose, user, userIndex }) {
     return <Fragment>
         {
             showModal && <S.ModalWrapper>
-                <S.Modal onSubmit={saveUser}>
+                <S.Modal onSubmit={saveUser} data-testid="form-modal">
                     <S.ModalHeader>
                         <S.ModalTitle>{user ? 'Editar usuário' : 'Cadastrar usuário'}</S.ModalTitle>
                         <S.ModalClose onClick={onClose}><CloseOutline size="30" color="#fff" /></S.ModalClose>

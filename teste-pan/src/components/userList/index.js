@@ -28,7 +28,12 @@ function UserList() {
     <FormModal showModal={ showModal } user={ selectedUser } onClose={ closeModal }/>
     {
       users.map((user, index) => 
-        <UserCard key={index} user={user} onEdit={() => onEdit(user)} onRemove={() => onRemove(user, index)}></UserCard>
+        <UserCard
+          key={index}
+          user={user}
+          onEdit={() => onEdit(user)}
+          onRemove={() => onRemove(user, index)}
+        ></UserCard>
       )
     }
   </S.ListWrapper>;

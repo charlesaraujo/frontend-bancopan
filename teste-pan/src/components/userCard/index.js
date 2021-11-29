@@ -6,7 +6,7 @@ import {EditOutline, TrashOutline} from '@styled-icons/evaicons-outline/';
 function UserCard({ user, onEdit, onRemove }) {
   
   
-  return <S.Card>
+  return <S.Card data-testid="user-card">
   
   <S.CardContent>
     <S.CardTitle>{ user.name }</S.CardTitle>
@@ -15,8 +15,15 @@ function UserCard({ user, onEdit, onRemove }) {
     <S.CardText><strong>Telefone: </strong>{ user.phone }</S.CardText>
   </S.CardContent>
   <S.CardActions>
-      <S.Button secondary onClick={onEdit}><EditOutline size="25" color="#fff"/></S.Button>
-      <S.Button onClick={onRemove}><TrashOutline size="25" color="#fff"/></S.Button>
+      <S.Button
+        secondary
+        onClick={onEdit}
+        data-testid="edit-button"
+        ><EditOutline size="25" color="#fff"/></S.Button>
+      <S.Button
+      onClick={onRemove}
+      data-testid="remove-button"
+      ><TrashOutline size="25" color="#fff"/></S.Button>
   </S.CardActions>
 </S.Card>;
 }
