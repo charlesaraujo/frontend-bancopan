@@ -10,9 +10,9 @@ function UserCard({ user, onEdit, onRemove }) {
   
   <S.CardContent>
     <S.CardTitle>{ user.name }</S.CardTitle>
-    <S.CardText><strong>Prop: </strong>{ user.cpf }</S.CardText>
-    <S.CardText><strong>Prop: </strong>{ user.email }</S.CardText>
-    <S.CardText><strong>Prop: </strong>{ user.phone }</S.CardText>
+    <S.CardText><strong>CPF: </strong>{ user.cpf }</S.CardText>
+    <S.CardText><strong>E-mail: </strong>{ user.email }</S.CardText>
+    <S.CardText><strong>Telefone: </strong>{ user.phone }</S.CardText>
   </S.CardContent>
   <S.CardActions>
       <S.Button secondary onClick={onEdit}><EditOutline size="25" color="#fff"/></S.Button>

@@ -1,5 +1,6 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import media from "styled-media-query";
+import { scaleUp } from '../../theme/animations';
 
 export const ModalWrapper = styled.div`
     position: fixed;
@@ -66,6 +67,7 @@ export const InputLabel = styled.label`
    margin: 2rem 0 .5rem 0;
    font-weight: 600;
 `;
+
 export const InputError = styled.label`
    color: #fff;
    text-align: center;
@@ -75,6 +77,7 @@ export const InputError = styled.label`
    font-size: .8em;
    background-color: var(--secondary-color);
    font-weight: 600;
+   animation: ${scaleUp} .3s ease-in-out;
 `;
 export const ModalFooter = styled.footer`
    padding: 1.5rem;

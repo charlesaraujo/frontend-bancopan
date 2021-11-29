@@ -33,7 +33,7 @@ const UserProvider = ({ children }) => {
 
   const addUser = (user) => {
     const allUsers = getAllUsers();
-    allUsers.unshift(user);
+    allUsers.push(user);
     updateUserList(allUsers);
   }
 

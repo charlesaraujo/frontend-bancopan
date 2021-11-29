@@ -5,6 +5,9 @@ export const ListWrapper = styled.section`
     padding: 1rem 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    ${media.lessThan("large")`
+        grid-template-columns: 1fr 1fr;
+    `}
     ${media.lessThan("medium")`
         grid-template-columns: 1fr;
     `}
