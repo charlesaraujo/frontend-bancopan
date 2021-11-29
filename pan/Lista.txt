@@ -1,0 +1,47 @@
+DESAFIO FRONT-END PAN
+
+Para iniciar este projeto basta acessar pelo navegador o documento index.html.
+Não é necessário instalar nada.
+
+Estratégia CSS:
+
+Foram 2 documentos sendo um Base com variáveis de estilos globais e outro das classes individuais e animações, 
+fazendo o reaproveitamento de estilos com seletores. Para ganhar tempo o uso de classes Bootstrap.
+Uso de 'em' e % nas medidas e uso de flexbox em alguns casos para auxiliar na responsividade.
+
+---
+Tecnologias:
+
+IDE: VISUAL STUDIO CODE;
+Linguagem: Javascript Vanilla, CSS, HTML;
+Framework: Bootstrap;
+---
+
+Tarefas:
+
+(x)Criar os primeiros docs HTML, CSS e JS;
+(x)Estrutura HTML com Título e Botão;
+(x)Root CSS;
+(x)Baixar fontes;
+(x)Links CSS e JS em HTML;
+(x)Conectar com API via Fetch + then();
+(x)Criar uma função genérica que apresenta um componente Card no Index.html;
+(x)Trazer os dados para os componentes na Home, sendo Cards em lista;
+(x)Incluir Bootstrap;
+(x)Aplicar estilos Título e Botão;
+(x)Criar estilos para os componentes do Card; 
+(x)Buscar ícones de 'close', 'edit' e salvar em uma pasta Icons;
+(x)Adicionar ícones aos componentes;
+(x)Criar um modal com um Form e um botão de fechar"X" e um de "Usuário cadastrado";
+(x)Fazer uma função que ative o modal e feche o modal;
+(x)Criar estilos dos componentes do forms; 
+(x)Fazer uma função que capture o valor de entrada no Forms e adicione no localstorage ou cookies;
+(x)Responsivo;
+(x)Form com floating labels;
+()Validações formulário;
+()Criar máscara CPF;
+()Criar máscara Telefone 9 dígitos;
+()Fazer uma função que apague o cadastro clicando no "X" e remova do localstorage;
+()Fazer uma função que deixe em tela o Card que foi salvo no localstorage;
+
+

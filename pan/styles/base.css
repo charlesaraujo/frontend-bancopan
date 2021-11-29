@@ -1,0 +1,44 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', 'Roboto', 'Arial', sans-serif;
+  background-color: var(--cor-bg);
+  width: 100vw;
+  height: 95vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+button {
+  border: none;
+  font-weight: 500;
+  box-shadow: var(--sombra-btn);
+  text: center;
+}
+
+/* Cores & Sombras */
+
+:root {
+  --cor-primaria: #12c8ff;
+  --cor-secundaria: #dfebea;
+  --cor-bg: #fafaf5;
+  --cor-bg-modal: #ffffff;
+  --cor-txt-btn: #ffffff;
+  --cor-txt-secundaria: #6e7373;
+  --cor-txt: #0c0d0d;
+  --sombra-btn: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+  --sombra-btn-hover: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  --cor-bg-fundo-modal: rgba(0, 0, 0, 0.3);
+}
