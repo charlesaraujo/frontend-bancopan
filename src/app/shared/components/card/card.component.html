@@ -1,0 +1,11 @@
+<div class="card card__border-left"
+     [class.card__border-left--primary]="border"
+     [class.card__border-left]="border">
+    <div class="card__title">
+        {{ title }}
+    </div>
+    <div class="card__description">
+        <ng-content></ng-content>
+    </div>
+
+</div>

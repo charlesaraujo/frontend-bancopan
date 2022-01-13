@@ -1,0 +1,15 @@
+<app-card title="Banco Pan">
+    <app-card *ngFor="let item of lista$ | async"
+              [border]="true"
+              [title]="item?.name">
+        <div class="flex-1">
+            <span class="font-weight-bold">CPF:</span> {{item?.cpf}}
+        </div>
+        <div class="flex-1">
+            <span class="font-weight-bold">E-mail:</span> {{item?.email}}
+        </div>
+        <div class="flex-1">
+            <span class="font-weight-bold">Telefone:</span> {{item?.phone}}
+        </div>
+    </app-card>
+</app-card>
