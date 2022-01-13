@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/app.state';
+import { saveUsuario } from '../usuario.action';
 import { selectUsuarioById } from '../usuario.selectors';
 
 @Component({
@@ -32,6 +33,7 @@ export class UsuarioFormComponent implements OnInit {
   }
 
   onSubmit(): void {
+    this.store.dispatch(saveUsuario({ usuario: this.form.value }));
     this.voltar();
   }
 
@@ -49,6 +51,7 @@ export class UsuarioFormComponent implements OnInit {
 
   private createFormGroup(): void {
     this.form = this.fb.group({
+      id: [null],
       name: ['', Validators.required],
       cpf: ['', Validators.required],
       phone: [''],
