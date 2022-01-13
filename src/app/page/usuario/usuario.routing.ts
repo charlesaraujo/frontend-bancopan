@@ -5,10 +5,15 @@ import { UsuarioListComponent } from "./usuario-list/usuario-list.component";
 export const USUARIO_ROUTING = RouterModule.forChild([
     {
         path: '',
-        component: UsuarioListComponent
+        children: [
+            {
+                path: '',
+                component: UsuarioListComponent,
+            },
+            {
+                path: 'form/:id',
+                component: UsuarioFormComponent
+            },
+        ],
     },
-    {
-        path: 'novo',
-        component: UsuarioFormComponent
-    }
 ]);

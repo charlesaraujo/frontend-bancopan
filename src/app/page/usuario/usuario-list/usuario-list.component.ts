@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { AppState } from 'src/app/app.state';
 import { removeUsuario, retriviedUsuarioList } from '../usuario.action';
 import { selectUsuarios } from '../usuario.selectors';
 import { UsuarioService } from '../usuario.service';
@@ -14,7 +15,7 @@ export class UsuarioListComponent implements OnInit {
   lista$ = this.store.select(selectUsuarios);
 
   constructor(private service: UsuarioService,
-    private store: Store) { }
+    private store: Store<AppState>) { }
 
   ngOnInit(): void {
     this.service

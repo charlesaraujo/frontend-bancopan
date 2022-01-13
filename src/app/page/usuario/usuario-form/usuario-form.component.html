@@ -30,7 +30,7 @@
                    formControlName="phone">
         </div>
         <div class="my d-flex justify-content-center">
-            <button routerLink="../" class="button button--secondary button--rounded">Voltar</button>
+            <button (click)="voltar()" class="button button--secondary button--rounded">Voltar</button>
             <button class="button button--primary button--rounded ml"
                     [disabled]="form.invalid"
                     type="submit">Salvar</button>
