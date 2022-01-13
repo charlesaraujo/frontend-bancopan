@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+$color-primary: #007bff;
+$color-secondary: #6c757d;
+$color-danger: #dc3545;
+
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.6rem;
@@ -25,7 +29,11 @@ body {
     justify-content: center;
 }
 
-.my-2 {
+.ml {
+    margin-left: 0.5rem;
+}
+
+.my {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
 }
@@ -48,13 +56,36 @@ body {
 
     &:hover {
         cursor: pointer;
-        background-color:#0667cf;
     }
     
     &--primary {
         color: #fff;
-        background-color: #007bff;
-        border-color: #007bff;
+        background-color: $color-primary;
+        border-color: $color-primary;
+
+        &:hover {
+            background-color:#0667cf;
+        }
+    }
+
+    &--secondary {
+        color: #fff;
+        background-color: $color-secondary;
+        border-color: $color-secondary;
+
+        &:hover {
+            background-color:#525a61;
+        }
+    }
+
+    &--danger {
+        color: #fff;
+        background-color: $color-danger;
+        border-color: $color-danger;
+
+        &:hover {
+            background-color:#bb2d3b;
+        }
     }
 
     &--rounded {
