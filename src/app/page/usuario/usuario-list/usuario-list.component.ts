@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { retriviedUsuarioList } from '../usuario.action';
 import { Usuario } from '../usuario.model';
+import { selectUsuarios } from '../usuario.selectors';
 import { UsuarioService } from '../usuario.service';
 
 @Component({
@@ -10,12 +13,15 @@ import { UsuarioService } from '../usuario.service';
 })
 export class UsuarioListComponent implements OnInit {
 
-  lista$!: Observable<Usuario[]>;
+  lista$ = this.store.select(selectUsuarios);
 
-  constructor(private service: UsuarioService) { }
+  constructor(private service: UsuarioService,
+    private store: Store) { }
 
   ngOnInit(): void {
-    this.lista$ = this.service.findAll();
+    this.service
+      .findAll()
+      .subscribe(usuarios => this.store.dispatch(retriviedUsuarioList({ usuarios })));
   }
 
 }

@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 import { HomeComponent } from './page/home/home.component';
+import { StoreModule } from '@ngrx/store';
+import { usuarioReducer } from './page/usuario/usuario.reducer';
 
 @NgModule({
   declarations: [
@@ -13,6 +13,7 @@ import { HomeComponent } from './page/home/home.component';
   ],
   imports: [
     CoreModule,
+    StoreModule.forRoot({usuarios: usuarioReducer}, {}),
   ],
   providers: [],
   bootstrap: [AppComponent]
