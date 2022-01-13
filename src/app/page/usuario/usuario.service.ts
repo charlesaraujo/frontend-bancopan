@@ -13,7 +13,15 @@ export class UsuarioService {
 
   findAll(): Observable<Usuario[]> {
     return this.httpClient.get<Usuario[]>(this.getFullUrl())
-      .pipe(map(lista => lista || []));
+      .pipe(
+        map(lista => {
+          const list  = lista || [];
+          // Gerar ids para os usuários da API que não possuem
+          let contador = 1;
+          lista.forEach(usuario => usuario.id = usuario.id || contador++);
+          return list;
+        })
+      );
   }
 
   getFullUrl(): string {

@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
-import { retriviedUsuarioList } from '../usuario.action';
-import { Usuario } from '../usuario.model';
+import { removeUsuario, retriviedUsuarioList } from '../usuario.action';
 import { selectUsuarios } from '../usuario.selectors';
 import { UsuarioService } from '../usuario.service';
 
@@ -22,6 +20,12 @@ export class UsuarioListComponent implements OnInit {
     this.service
       .findAll()
       .subscribe(usuarios => this.store.dispatch(retriviedUsuarioList({ usuarios })));
+  }
+
+  remover(id?: number) {
+    if (id) {
+      this.store.dispatch(removeUsuario({ id }));
+    }
   }
 
 }

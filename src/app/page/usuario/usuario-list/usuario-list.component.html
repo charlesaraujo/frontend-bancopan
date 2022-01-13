@@ -1,6 +1,7 @@
 <app-card title="Banco Pan">
     <div class="d-flex justify-content-center">
-        <button class="button button--primary button--rounded my">Adicionar Usuário</button>
+        <button class="button button--primary button--rounded my"
+                routerLink="novo">Adicionar Usuário</button>
     </div>
     <app-card *ngFor="let item of lista$ | async"
               [border]="true"
@@ -16,7 +17,7 @@
         </div>
         <div>
             <i class="button button--secondary pi pi-pencil"></i>
-            <i class="button button--danger ml pi pi-trash"></i>
+            <i (click)="remover(item.id)" class="button button--danger ml pi pi-trash"></i>
         </div>
     </app-card>
 </app-card>
