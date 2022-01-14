@@ -2,6 +2,7 @@
     <form (ngSubmit)="onSubmit()"
           [formGroup]="form">
         <div class="my">
+            <label for="name">Nome</label>
             <input id="name"
                    placeholder="Nome Completo (sem abreviação)"
                    class="input"
@@ -9,6 +10,7 @@
                    formControlName="name">
         </div>
         <div class="my">
+            <label for="email">E-mail</label>
             <input id="email"
                    placeholder="E-mail"
                    class="input"
@@ -16,6 +18,7 @@
                    formControlName="email">
         </div>
         <div class="my">
+            <label for="cpf">CPF</label>
             <input id="cpf"
                    placeholder="CPF"
                    class="input"
@@ -23,13 +26,14 @@
                    formControlName="cpf">
         </div>
         <div class="my">
+            <label for="phone">Telefone</label>
             <input id="phone"
                    placeholder="Telefone"
                    class="input"
                    type="text"
                    formControlName="phone">
         </div>
-        <div class="my d-flex justify-content-center">
+        <div class="my row justify-content-center">
             <button (click)="voltar()" class="button button--secondary button--rounded">Voltar</button>
             <button class="button button--primary button--rounded ml"
                     [disabled]="form.invalid"

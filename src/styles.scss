@@ -23,20 +23,59 @@ body {
     font-weight: bold;
 }
 
-.d-flex {
+.row {
     display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    box-sizing: border-box;
 }
 
-.flex-1 {
+.col {
     flex: 1;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
 }
 
-.flex-3 {
-    flex: 3;
+.col-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 
-.justify-content-center {
-    justify-content: center;
+.col-8 {
+    flex: 0 0 66.666667%;
+    max-width: 66.666667%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.col-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+    padding-right: 15px;
+    padding-left: 15px;
+    box-sizing: border-box;
+}
+
+.justify-content {
+    &-center {
+        justify-content: center;
+    }
+    
+    &-end {
+        justify-content: flex-end;
+    }
+}
+
+.showonhover {
+    visibility: hidden;
+    &:hover {
+        visibility: visible;
+    }
 }
 
 .ml {
@@ -50,6 +89,11 @@ body {
 .my {
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
+}
+
+.mx {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .button {

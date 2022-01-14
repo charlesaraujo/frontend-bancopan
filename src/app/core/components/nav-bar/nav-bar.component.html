@@ -1,0 +1,8 @@
+<nav>
+    <div class="nav-item" *ngFor="let item of menu">
+        <i *ngIf="item?.icon"
+           [class]="item?.icon"></i>
+        <a class="mx"
+           [routerLink]="item.url">{{item.name}}</a>
+    </div>
+</nav>

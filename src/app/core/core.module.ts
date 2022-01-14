@@ -6,12 +6,14 @@ import { StoreModule } from '@ngrx/store';
 import { usuarioReducer } from '../page/usuario/usuario.reducer';
 import { LoaderComponent } from './components/loader/loader.component';
 import { loaderReducer } from './components/loader/loader.reducer';
+import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 
 
 
 @NgModule({
   declarations: [
-    LoaderComponent
+    LoaderComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
@@ -27,6 +29,7 @@ import { loaderReducer } from './components/loader/loader.reducer';
     AppRoutingModule,
     HttpClientModule,
     LoaderComponent,
+    NavBarComponent,
   ]
 })
 export class CoreModule { }

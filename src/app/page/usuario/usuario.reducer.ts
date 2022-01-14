@@ -39,7 +39,7 @@ export const usuarioReducer = createReducer(
             }
         }
         // Gerar um novo ID
-        const id = (usuariosLocalStorage.length - 1 || 0) + 1;
+        const id = (usuariosLocalStorage.length || 0) + 1;
         const novoUsuario = { ...usuario, id };
 
         const newState = [...state, novoUsuario];
