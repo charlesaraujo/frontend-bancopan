@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { setLoader } from '@core/components/loader/loader.action';
 import { Store } from '@ngrx/store';
-import { finalize, tap } from 'rxjs';
-import { AppState } from 'src/app/app.state';
-import { setLoader } from 'src/app/core/components/loader/loader.action';
+import { finalize } from 'rxjs';
+import { AppState } from '@app/app.state';
 import { removeUsuario, retriviedUsuarioList } from '../usuario.action';
 import { selectUsuarios } from '../usuario.selectors';
 import { UsuarioService } from '../usuario.service';
