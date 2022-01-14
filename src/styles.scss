@@ -13,6 +13,12 @@ body {
     background-color: #f5f5f5;
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
 .font-weight-bold {
     font-weight: bold;
 }
@@ -25,12 +31,20 @@ body {
     flex: 1;
 }
 
+.flex-3 {
+    flex: 3;
+}
+
 .justify-content-center {
     justify-content: center;
 }
 
 .ml {
     margin-left: 0.5rem;
+}
+
+.mr {
+    margin-right: 0.5rem;
 }
 
 .my {
@@ -110,7 +124,7 @@ body {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
-    width: 98%;
+    width: 97%;
 
     &:focus {
         color: #495057;

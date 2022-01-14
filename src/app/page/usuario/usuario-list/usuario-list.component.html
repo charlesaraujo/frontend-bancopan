@@ -6,7 +6,7 @@
     <app-card *ngFor="let item of lista$ | async"
               [border]="true"
               [title]="item?.name">
-        <div class="flex-1">
+        <div class="flex-3">
             <span class="font-weight-bold">CPF:</span> {{item?.cpf | cpf}}
         </div>
         <div class="flex-1">
