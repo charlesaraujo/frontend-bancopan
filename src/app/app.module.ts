@@ -10,6 +10,7 @@ import {MatCardModule} from "@angular/material/card";
 import {MatListModule} from "@angular/material/list";
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {ComponentsModule} from "../components/components.module";
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ComponentsModule,
     HttpClientModule,
     MatButtonModule,
     MatIconModule,

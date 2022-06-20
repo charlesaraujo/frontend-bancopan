@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import {environment} from "../environments/environment";
 import {Usuario} from "../models/Usuario";
+import {MatDialog} from "@angular/material/dialog";
+import {JanelaModalComponent} from "../components/janela-modal/janela-modal.component";
 
 @Component({
   selector: 'app-root',
@@ -13,7 +15,8 @@ export class AppComponent implements OnInit {
   usuarios: Usuario[];
   loading: boolean;
 
-  constructor(private http:HttpClient) {
+  constructor(private http:HttpClient,
+              public dialog: MatDialog) {
 
   }
 
@@ -27,8 +30,10 @@ export class AppComponent implements OnInit {
     })
   }
 
-  abrirModal() {
-
+  abrirModal(): void {
+    this.dialog.open(JanelaModalComponent, {
+      width: '450px'
+    });
   }
 
 }
