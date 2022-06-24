@@ -52,6 +52,10 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                },
+                {
+                    "replace": "src/environments/general-variables.ts",
+                    "with": "src/environments/general-variables.prod.ts"
                 }
               ],
               "outputHashing": "all"
