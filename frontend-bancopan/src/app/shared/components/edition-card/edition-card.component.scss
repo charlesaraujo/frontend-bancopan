@@ -1,0 +1,23 @@
+.feb-edition-card-container {
+    display: flex;
+}
+
+.feb-edition-card-content {
+    flex: 1;
+}
+
+.feb-edition-card-buttons {
+    flex: 0 0 50px;
+}
+
+.feb-edition-card-button-container {
+    margin: 10px;
+}
+
+.feb-edition-card-button {
+    border-radius: 7px !important;
+}
+
+.feb-big-button-icon {
+    font-size: 25px;
+}

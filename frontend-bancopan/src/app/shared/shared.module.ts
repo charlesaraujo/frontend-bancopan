@@ -1,8 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { CardComponent } from './components/card/card.component';
+import { SimpleCardComponent } from './components/simple-card/simple-card.component';
+import { EditionCardComponent } from './components/edition-card/edition-card.component';
 
 @NgModule({
     imports: [
@@ -16,13 +17,15 @@ import { CardComponent } from './components/card/card.component';
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
-        CardComponent,
+        SimpleCardComponent,
+        EditionCardComponent,
     ],
     providers: [
 
     ],
     declarations: [
-        CardComponent,
+        SimpleCardComponent,
+        EditionCardComponent,
     ],
 })
 export class SharedModule { }

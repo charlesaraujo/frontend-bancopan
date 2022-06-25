@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserModel } from '../models/users-list.model';
 import { UsersService } from '../services/users.service';
 
 @Component({
@@ -9,15 +10,24 @@ import { UsersService } from '../services/users.service';
 export class UsersListComponent implements OnInit {
 
     constructor(
-        private readonly usersService: UsersService,
+        public readonly usersService: UsersService,
     ) { }
 
     ngOnInit(): void {
-        this.usersService.getUsersList()
-            .subscribe((resp) => {
-                console.log(resp);
-                
-            })
+        this.loadUsersList();
+    }
+
+    public get usersList(): Array<UserModel> | null {
+        return this.usersService.usersList;
+    }
+
+    private loadUsersList(): void {
+        this.usersService.loadUsersList()
+            .subscribe();
+    }
+
+    public canEnableButtons(user: UserModel): boolean {
+        return user.id ? true : false
     }
 
 }

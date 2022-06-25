@@ -1,0 +1,26 @@
+<feb-simple-card>
+    <div class="feb-edition-card-container">
+        <div class="feb-edition-card-content">
+            <ng-content></ng-content>
+        </div>
+        <div class="feb-edition-card-buttons">
+            <div class="feb-edition-card-button-container">
+                <button class="feb-edition-card-button button is-small is-info" [disabled]="!enableEditBtn"
+                    (click)="editClick()">
+                    <span class="icon">
+                        <i class="mdi mdi-pencil-circle-outline feb-big-button-icon"></i>
+                    </span>
+                </button>
+            </div>
+
+            <div class="feb-edition-card-button-container">
+                <button class="feb-edition-card-button button is-small is-danger" [disabled]="!enableDeleteBtn"
+                    (click)="deleteClick()">
+                    <span class="icon">
+                        <i class="mdi mdi-close-circle-outline feb-big-button-icon"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+</feb-simple-card>

@@ -11,21 +11,30 @@
         </button>
     </div>
 
-    <div class="columns is-desktop">
-        <div class="column">
-            <feb-card>
-                teste
-            </feb-card>
+    <div class="mt-6 columns is-desktop is-multiline has-text-left" *ngIf="usersService.usersList">
+        <div class="column is-narrow" *ngFor="let user of usersService.usersList">
+            <div style="width: 400px;">
+                <feb-edition-card [enableEditBtn]="canEnableButtons(user)" [enableDeleteBtn]="canEnableButtons(user)">
+                    <div class="feb-block">
+                        <strong>{{ user.name }}</strong>.
+                    </div>
+                    <div class="feb-block">
+                        <strong>CPF:</strong>
+                        {{ user.cpf }}
+                    </div>
+                    <div class="feb-block">
+                        <strong>E-mail:</strong>
+                        {{ user.email }}
+                    </div>
+                    <div class="feb-block">
+                        <strong>Telefone:</strong>
+                        {{ user.phone }}
+                    </div>
+                </feb-edition-card>
+            </div>
         </div>
-        <div class="column">
-            <feb-card>
-                teste
-            </feb-card>
-        </div>
-      </div>
-      
-    
+    </div>
+
 
 
 </div>
-
