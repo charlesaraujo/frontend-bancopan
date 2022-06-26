@@ -3,7 +3,7 @@
     <p class="is-size-1 has-text-centered">Banco Pan</p>
 
     <div class="mt-5 mb-5 has-text-centered">
-        <button class="button is-info is-rounded has-text-centered">
+        <button class="button is-info is-rounded has-text-centered" (click)="showNewEditUserModal()">
             <span>Adicionar usuário</span>
             <span class="icon">
                 <i class="mdi mdi-plus-circle-outline"></i>
@@ -11,6 +11,7 @@
         </button>
     </div>
 
+    <!-- Lista de usuários -->
     <div class="mt-6 columns is-desktop is-multiline has-text-left" *ngIf="usersService.usersList">
         <div class="column is-narrow" *ngFor="let user of usersService.usersList">
             <div style="width: 400px;">
@@ -35,6 +36,8 @@
         </div>
     </div>
 
+    <!-- Novo usuário e edição -->
+    <feb-new-edit-user #newEditUserComponent></feb-new-edit-user>
 
 
 </div>

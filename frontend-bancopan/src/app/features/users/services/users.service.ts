@@ -11,6 +11,8 @@ export class UsersService {
     }
     private _usersList: Array<UserModel> | null = null;
 
+    public selectedUser: UserModel | null = null;
+
 
     constructor(private readonly usersRepository: UsersRepository) { }
 

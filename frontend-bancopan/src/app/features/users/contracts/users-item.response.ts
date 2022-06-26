@@ -1,5 +1,5 @@
 export interface UsersItemResponse {
-    id?: string;
+    id?: number;
     cpf: string;
     email: string;
     name: string;

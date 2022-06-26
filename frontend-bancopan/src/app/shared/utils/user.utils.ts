@@ -1,3 +1,5 @@
+import { AbstractControl } from "@angular/forms";
+
 export class UserUtils {
 
     /**
@@ -7,19 +9,19 @@ export class UserUtils {
      */
     public static formatCpf(cpf: string): string {
         //retira os caracteres indesejados...
-        this.formatCpfOnlyNumbers(cpf);
+        this.formatOnlyNumbers(cpf);
 
         //realizar a formatação...
         return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
     }
 
     /**
-     * Formata o CPF deixando somente os números
-     * @param cpf CPF a ser formatado
-     * @returns CPF apenas com números
+     * Formata o CPF ou Telefone deixando somente números
+     * @param item Item a ser formatado
+     * @returns Item somente numeros
      */
-    public static formatCpfOnlyNumbers(cpf: string): string {
-        return cpf = cpf.replace(/[^\d]/g, "");
+    public static formatOnlyNumbers(item: string): string {
+        return item = item.replace(/[^\d]/g, "");
     }
 
     /**
@@ -36,5 +38,28 @@ export class UserUtils {
             r = r.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
         }
         return r;
+    }
+
+    public static getFormControlErrorMessage(formControl: AbstractControl): string {
+        if (formControl.errors) {
+            const error = formControl.errors as any;
+            if (error.required) {
+                return 'Este campo é obrigatório.';
+            } else if (error.minlength) {
+                return `Mínimo ${error.minlength.requiredLength} caractéres.`
+            } else if (error.email) {
+                return `Não corresponde a um formato de e-mail válido.`
+            } else if (error.mensagem) {
+                return error.mensagem;
+            }
+        }
+        return '';
+    }
+
+    public static canShowFormControlError(formControl: AbstractControl): boolean {
+        if (formControl.invalid && (formControl.dirty || formControl.touched)) {
+            return true;
+        }
+        return false;
     }
 }

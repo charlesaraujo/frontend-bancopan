@@ -1,0 +1,56 @@
+<div class="modal" [ngClass]="{ 'is-active' : isModalActive }">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+        <header class="modal-card-head">
+            <p class="modal-card-title">Cadastrar usuário</p>
+            <button class="delete" (click)="closeModal()"></button>
+        </header>
+        <section class="modal-card-body">
+            <div [formGroup]="userForm">
+                <div class="field">
+                    <label class="label">Nome completo (sem abreviatura)</label>
+                    <div class="control">
+                        <input class="input" type="text" formControlName="name"
+                            [ngClass]="{ 'is-danger': UserUtils.canShowFormControlError(userForm.controls.name) }">
+                    </div>
+                    <p class="help is-danger" *ngIf="UserUtils.canShowFormControlError(userForm.controls.name)">
+                        {{ UserUtils.getFormControlErrorMessage(userForm.controls.name) }}</p>
+                </div>
+
+                <div class="field">
+                    <label class="label">E-mail</label>
+                    <div class="control">
+                        <input class="input" type="text" formControlName="email"
+                            [ngClass]="{ 'is-danger': UserUtils.canShowFormControlError(userForm.controls.email) }">
+                    </div>
+                    <p class="help is-danger" *ngIf="UserUtils.canShowFormControlError(userForm.controls.email)">
+                        {{ UserUtils.getFormControlErrorMessage(userForm.controls.email) }}</p>
+                </div>
+
+                <div class="field">
+                    <label class="label">CPF</label>
+                    <div class="control">
+                        <input class="input" type="text" formControlName="cpf"
+                            [ngClass]="{ 'is-danger': UserUtils.canShowFormControlError(userForm.controls.cpf) }">
+                    </div>
+                    <p class="help is-danger" *ngIf="UserUtils.canShowFormControlError(userForm.controls.cpf)">
+                        {{ UserUtils.getFormControlErrorMessage(userForm.controls.cpf) }}</p>
+                </div>
+
+                <div class="field">
+                    <label class="label">Telefone</label>
+                    <div class="control">
+                        <input class="input" type="text" formControlName="phone"
+                            [ngClass]="{ 'is-danger': UserUtils.canShowFormControlError(userForm.controls.phone) }">
+                    </div>
+                    <p class="help is-danger" *ngIf="UserUtils.canShowFormControlError(userForm.controls.phone)">
+                        {{ UserUtils.getFormControlErrorMessage(userForm.controls.phone) }}</p>
+                </div>
+            </div>
+        </section>
+        <footer class="modal-card-foot">
+            <button class="button is-success" (click)="teste()">Save changes</button>
+            <button class="button" (click)="closeModal()">Cancelar</button>
+        </footer>
+    </div>
+</div>

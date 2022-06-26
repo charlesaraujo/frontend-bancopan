@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { UserModel } from '../models/users-list.model';
+import { NewEditUserComponent } from '../new-edit-user/new-edit-user.component';
 import { UsersService } from '../services/users.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { UsersService } from '../services/users.service';
     styleUrls: ['./users-list.component.scss']
 })
 export class UsersListComponent implements OnInit {
+
+    @ViewChild('newEditUserComponent', { static: false }) newEditUserComponent: any;
 
     constructor(
         public readonly usersService: UsersService,
@@ -28,6 +31,10 @@ export class UsersListComponent implements OnInit {
 
     public canEnableButtons(user: UserModel): boolean {
         return user.id ? true : false
+    }
+
+    public showNewEditUserModal(): void {
+        this.newEditUserComponent.isModalActive = true;
     }
 
 }
