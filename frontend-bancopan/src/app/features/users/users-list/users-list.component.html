@@ -12,7 +12,7 @@
     </div>
 
     <!-- Lista de usuários -->
-    <div class="mt-6 columns is-desktop is-multiline has-text-left">
+    <div class="mt-6 columns is-desktop is-multiline has-text-left" *ngIf="usersService.usersList;else loadingTemplate">
         <div class="column is-narrow" *ngFor="let user of usersService.usersList">
             <div style="width: 400px;">
                 <feb-edition-card [enableEditBtn]="canEnableButtons(user)" [enableDeleteBtn]="canEnableButtons(user)"
@@ -36,9 +36,12 @@
             </div>
         </div>
     </div>
+    <ng-template #loadingTemplate>
+        <div class="mt-6 has-text-centered">
+            <p class="is-size-4">Carregando...</p>
+        </div>
+    </ng-template>
 
     <!-- Novo usuário e edição -->
     <feb-new-edit-user #newEditUserComponent (updateList)="loadUsersList()"></feb-new-edit-user>
-
-
 </div>
