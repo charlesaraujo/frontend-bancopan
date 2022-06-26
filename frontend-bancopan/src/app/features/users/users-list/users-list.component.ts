@@ -24,7 +24,7 @@ export class UsersListComponent implements OnInit {
         return this.usersService.usersList;
     }
 
-    private loadUsersList(): void {
+    public loadUsersList(): void {
         this.usersService.loadUsersList()
             .subscribe();
     }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserUtils } from 'src/app/shared/utils/user.utils';
 import { UserValidators } from 'src/app/shared/utils/user.validator';
@@ -13,6 +13,7 @@ import { UsersService } from '../services/users.service';
 export class NewEditUserComponent implements OnInit {
 
     @Input() public isModalActive = false;
+    @Output() public updateList = new EventEmitter<void>();
     public isEditionMode = false;
 
     public readonly userForm = new FormGroup({
@@ -57,8 +58,7 @@ export class NewEditUserComponent implements OnInit {
         } else {
             this.usersService.createNewUserLocalStorage(userItem);
         }
-        this.usersService.loadUsersList()
-            .subscribe();
+        this.updateList.emit();
         this.closeModal();
     }
 
