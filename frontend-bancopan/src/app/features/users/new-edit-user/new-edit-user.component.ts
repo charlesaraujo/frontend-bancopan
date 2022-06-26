@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserUtils } from 'src/app/shared/utils/user.utils';
 import { UserValidators } from 'src/app/shared/utils/user.validator';
+import { UsersItemRequest } from '../contracts/users-item.request';
+import { UsersService } from '../services/users.service';
 
 @Component({
     selector: 'feb-new-edit-user',
@@ -21,7 +23,9 @@ export class NewEditUserComponent implements OnInit {
         phone: new FormControl('', [Validators.required, UserValidators.phoneValidator]),
     });
 
-    constructor() { }
+    constructor(
+        private readonly usersService: UsersService,
+    ) { }
 
     ngOnInit(): void {
     }
@@ -46,9 +50,16 @@ export class NewEditUserComponent implements OnInit {
         return UserUtils;
     }
 
-    public teste(): void {
-        console.log(this.userForm);
-        
+    public saveData(): void {
+        const userItem = new UsersItemRequest(this.userForm.getRawValue());
+        if (this.isEditionMode) {
+
+        } else {
+            this.usersService.createNewUserLocalStorage(userItem);
+        }
+        this.usersService.loadUsersList()
+            .subscribe();
+        this.closeModal();
     }
 
 }

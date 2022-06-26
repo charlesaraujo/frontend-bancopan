@@ -32,7 +32,7 @@ export class UsersRepository {
             userList.push(user);
             localStorage.setItem(usersLocalStorageKey, JSON.stringify(userList));
         } else {
-            localStorage.setItem(usersLocalStorageKey, JSON.stringify(user));
+            localStorage.setItem(usersLocalStorageKey, JSON.stringify([user]));
         }
     }
 

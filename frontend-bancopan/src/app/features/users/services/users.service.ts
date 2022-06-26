@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { UsersRepository } from '../repositories/users.repository';
-import { map, Observable } from 'rxjs';
+import { catchError, map, Observable, throwError } from 'rxjs';
 import { UserModel } from '../models/users-list.model';
+import { UsersItemRequest } from '../contracts/users-item.request';
 
 @Injectable()
 export class UsersService {
@@ -10,8 +11,6 @@ export class UsersService {
         return this._usersList;
     }
     private _usersList: Array<UserModel> | null = null;
-
-    public selectedUser: UserModel | null = null;
 
 
     constructor(private readonly usersRepository: UsersRepository) { }
@@ -28,6 +27,10 @@ export class UsersService {
                     const usersList = this.joinUsersListswithLocalStorageList(resp);
                     this._usersList = usersList.map((item) => new UserModel(item));
                 }),
+                catchError((err) => {
+                    const errrorr = err;
+                    return throwError(err);
+                })
             );
     }
 
@@ -41,6 +44,16 @@ export class UsersService {
         return localStorageUsers && localStorageUsers.length > 0
             ? usersList.concat(localStorageUsers)
             : usersList;
+    }
+
+    public getNextId(): number {
+        const lastItem = this.usersList![this.usersList!.length - 1];
+        return lastItem.id ? (lastItem.id! + 1) : 1;
+    }
+
+    public createNewUserLocalStorage(user: UsersItemRequest): void {
+        user.id = this.getNextId();
+        this.usersRepository.createUserOnLocalStorage(user);
     }
 
 }

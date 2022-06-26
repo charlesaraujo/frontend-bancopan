@@ -2,7 +2,7 @@
     <div class="modal-background"></div>
     <div class="modal-card">
         <header class="modal-card-head">
-            <p class="modal-card-title">Cadastrar usuário</p>
+            <p class="modal-card-title">{{ isEditionMode ? 'Editar usuário.' : 'Cadastrar usuário.' }}</p>
             <button class="delete" (click)="closeModal()"></button>
         </header>
         <section class="modal-card-body">
@@ -49,7 +49,7 @@
             </div>
         </section>
         <footer class="modal-card-foot">
-            <button class="button is-success" (click)="teste()">Save changes</button>
+            <button class="button is-success" (click)="saveData()">Save changes</button>
             <button class="button" (click)="closeModal()">Cancelar</button>
         </footer>
     </div>
