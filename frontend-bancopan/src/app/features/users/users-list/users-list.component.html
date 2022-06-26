@@ -11,6 +11,10 @@
         </button>
     </div>
 
+    <div class="mt-6">
+        <feb-dev-notes></feb-dev-notes>
+    </div>
+
     <!-- Lista de usuários -->
     <div class="mt-6 columns is-desktop is-multiline has-text-left" *ngIf="usersService.usersList;else loadingTemplate">
         <div class="column is-narrow" *ngFor="let user of usersService.usersList">
@@ -18,7 +22,7 @@
                 <feb-edition-card [enableEditBtn]="canEnableButtons(user)" [enableDeleteBtn]="canEnableButtons(user)"
                     (onEditClick)="editUser(user)" (onDeleteClick)="deleteUser(user)">
                     <div class="feb-block">
-                        <strong>{{ user.name }}</strong>.
+                        <strong>{{ user.name }}</strong>
                     </div>
                     <div class="feb-block">
                         <strong>CPF:</strong>

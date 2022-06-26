@@ -9,7 +9,7 @@ import { UsersModule } from './features/users/users.module';
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     imports: [
         BrowserModule,

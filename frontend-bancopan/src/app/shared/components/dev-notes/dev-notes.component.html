@@ -1,0 +1,26 @@
+<div class="card">
+    <header class="card-header has-background-primary has-text-white cursor-pointer" (click)="toggleShowContent()">
+        <p class="card-header-title has-text-white">
+            Notas do desenvolvedor&nbsp;
+            <span class="has-text-weight-normal">(Leia antes de usar)</span>
+        </p>
+        <button class="card-header-icon" aria-label="more options">
+            <span class="icon">
+                <i class="mdi " aria-hidden="true"
+                    [ngClass]="{ 'mdi-chevron-down-circle': !showContent, 'mdi-chevron-up-circle': showContent }"></i>
+            </span>
+        </button>
+    </header>
+
+    <div class="card-content" *ngIf="showContent">
+        <div class="content">
+            <ul>
+                <li>Você só pode <strong>editar</strong> ou <strong>excluir</strong> usuários que foram cadastrados no LocalStorage (utilizando o botão adicionar usuário).</li>
+                <li>Para gerar CPF's válidos, você pode usar o <a href="https://geradorcpf.org/" target="_blank">Gerador de CPF's</a></li>
+            </ul>
+
+            <p>Criado por: João Marcos Alencar de Souza</p>
+        </div>
+    </div>
+
+</div>
