@@ -1,7 +1,28 @@
-.feb-user-card {
-    width: 400px;
-}
-
 .column {
     margin: auto !important;
+}
+
+.feb-card-div-container {
+    width: 400px;
+    margin: 0 auto;
+}
+
+@media (max-width: 450px) {
+    .feb-card-div-container {
+        width: 350px;
+        margin: 0 auto;
+        font-size: 10pt !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .feb-card-div-container {
+        width: 300px;
+    }
+}
+
+@media (max-width: 340px) {
+    .feb-card-div-container {
+        width: 280px;
+    }
 }
