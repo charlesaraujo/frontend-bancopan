@@ -60,4 +60,12 @@ export class UsersService {
         this.usersRepository.saveListOnLocalStorage(localStorageList);
     }
 
+    public deleteUserLocalStorage(user: UsersItemRequest): void {
+        const localStorageList = this.usersRepository.getUsersLocalStorage();
+        const itemIndex = localStorageList.findIndex((item) => item.id === user.id);
+
+        localStorageList.splice(itemIndex, 1);
+        this.usersRepository.saveListOnLocalStorage(localStorageList);
+    }
+
 }

@@ -16,7 +16,7 @@
         <div class="column is-narrow" *ngFor="let user of usersService.usersList">
             <div style="width: 400px;">
                 <feb-edition-card [enableEditBtn]="canEnableButtons(user)" [enableDeleteBtn]="canEnableButtons(user)"
-                    (onEditClick)="editUser(user)">
+                    (onEditClick)="editUser(user)" (onDeleteClick)="deleteUser(user)">
                     <div class="feb-block">
                         <strong>{{ user.name }}</strong>.
                     </div>

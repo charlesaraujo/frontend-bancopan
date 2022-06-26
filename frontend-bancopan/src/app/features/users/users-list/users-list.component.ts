@@ -41,4 +41,9 @@ export class UsersListComponent implements OnInit {
         this.showNewEditUserModal();
     }
 
+    public deleteUser(user: UserModel): void {
+        this.usersService.deleteUserLocalStorage(user);
+        this.loadUsersList();
+    }
+
 }
