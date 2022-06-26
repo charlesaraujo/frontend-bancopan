@@ -11,7 +11,7 @@ import { UsersService } from '../services/users.service';
     templateUrl: './new-edit-user.component.html',
     styleUrls: ['./new-edit-user.component.scss']
 })
-export class NewEditUserComponent implements OnInit {
+export class NewEditUserComponent {
 
     @Input() public isModalActive = false;
     @Output() public updateList = new EventEmitter<void>();
@@ -28,9 +28,6 @@ export class NewEditUserComponent implements OnInit {
     constructor(
         private readonly usersService: UsersService,
     ) { }
-
-    ngOnInit(): void {
-    }
 
     public setForNewUser(): void {
         this.isEditionMode = false;

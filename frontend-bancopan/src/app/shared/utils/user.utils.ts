@@ -3,19 +3,6 @@ import { AbstractControl } from "@angular/forms";
 export class UserUtils {
 
     /**
-     * Formata o CPF incluindo os simbolos necessários
-     * @param cpf CPF a ser formatado
-     * @returns CPF formatado
-     */
-    public static formatCpf(cpf: string): string {
-        //retira os caracteres indesejados...
-        this.formatOnlyNumbers(cpf);
-
-        //realizar a formatação...
-        return cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
-    }
-
-    /**
      * Formata o CPF ou Telefone deixando somente números
      * @param item Item a ser formatado
      * @returns Item somente numeros

@@ -9,12 +9,12 @@ export class UsersItemRequest implements UsersItemResponse {
     public name: string;
     public phone: string;
 
-    constructor(form: any) {
-        this.id = form.id;
-        this.cpf = UserUtils.formatOnlyNumbers(form.cpf);
-        this.email = form.email;
-        this.name = form.name;
-        this.phone = UserUtils.formatOnlyNumbers(form.phone);
+    constructor(formValue: any) {
+        this.id = formValue.id;
+        this.cpf = UserUtils.formatOnlyNumbers(formValue.cpf);
+        this.email = formValue.email;
+        this.name = formValue.name;
+        this.phone = UserUtils.formatOnlyNumbers(formValue.phone);
     }
 
 }
