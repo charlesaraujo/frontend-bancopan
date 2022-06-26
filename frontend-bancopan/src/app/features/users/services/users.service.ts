@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { UsersRepository } from '../repositories/users.repository';
-import { catchError, delay, map, Observable, throwError } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { UserModel } from '../models/users-list.model';
 import { UsersItemRequest } from '../contracts/users-item.request';
 

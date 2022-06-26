@@ -17,12 +17,6 @@ export class UsersRepository {
 
     public getUsersLocalStorage(): Array<UsersItemResponse> {
         const usersJson = localStorage.getItem(usersLocalStorageKey);
-        /**
-         * When we return 1, the function communicates to sort() that the object b takes precedence in sorting over the object a. Returning -1 would do the opposite.
-
-        The callback function could calculate other properties too, to handle the case where the color is the same, and order by a secondary property as well:
-         */
-        // .sort((a, b) => (a.color > b.color) ? 1 : -1)
         return usersJson ? JSON.parse(usersJson) : null;
     }
 
