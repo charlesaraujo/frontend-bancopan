@@ -26,10 +26,6 @@ export class UsersService {
                 map((resp) => {
                     const usersList = this.joinUsersListswithLocalStorageList(resp);
                     this._usersList = usersList.map((item) => new UserModel(item));
-                }),
-                catchError((err) => {
-                    const errrorr = err;
-                    return throwError(err);
                 })
             );
     }
@@ -54,6 +50,14 @@ export class UsersService {
     public createNewUserLocalStorage(user: UsersItemRequest): void {
         user.id = this.getNextId();
         this.usersRepository.createUserOnLocalStorage(user);
+    }
+
+    public saveEditedUserLocalStorage(user: UsersItemRequest): void {
+        const localStorageList = this.usersRepository.getUsersLocalStorage();
+        const itemIndex = localStorageList.findIndex((item) => item.id === user.id);
+
+        localStorageList[itemIndex] = user;
+        this.usersRepository.saveListOnLocalStorage(localStorageList);
     }
 
 }

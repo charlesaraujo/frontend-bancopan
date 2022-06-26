@@ -36,4 +36,8 @@ export class UsersRepository {
         }
     }
 
+    public saveListOnLocalStorage(usersList: Array<UsersItemResponse>): void {
+        localStorage.setItem(usersLocalStorageKey, JSON.stringify(usersList));
+    }
+
 }

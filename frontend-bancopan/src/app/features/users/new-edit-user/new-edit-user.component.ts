@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { UserUtils } from 'src/app/shared/utils/user.utils';
 import { UserValidators } from 'src/app/shared/utils/user.validator';
 import { UsersItemRequest } from '../contracts/users-item.request';
+import { UserModel } from '../models/users-list.model';
 import { UsersService } from '../services/users.service';
 
 @Component({
@@ -17,7 +18,7 @@ export class NewEditUserComponent implements OnInit {
     public isEditionMode = false;
 
     public readonly userForm = new FormGroup({
-        id: new FormControl(''),
+        id: new FormControl(0),
         cpf: new FormControl('', [Validators.required, UserValidators.isValidCpf]),
         email: new FormControl('', [Validators.required, Validators.email]),
         name: new FormControl('', [Validators.required, Validators.minLength(3)]),
@@ -34,12 +35,23 @@ export class NewEditUserComponent implements OnInit {
     public setForNewUser(): void {
         this.isEditionMode = false;
         this.userForm.reset({
-            id: '',
+            id: 0,
             cpf: '',
             email: '',
             name: '',
             phone: '',
         });
+    }
+
+    public setForEditUser(user: UserModel): void {
+        this.userForm.patchValue({
+            id: user.id,
+            cpf: user.cpf,
+            email: user.email,
+            name: user.name,
+            phone: user.phone,
+        });
+        this.isEditionMode = true;
     }
 
     public closeModal(): void {
@@ -51,15 +63,25 @@ export class NewEditUserComponent implements OnInit {
         return UserUtils;
     }
 
-    public saveData(): void {
-        const userItem = new UsersItemRequest(this.userForm.getRawValue());
-        if (this.isEditionMode) {
+    private markFormAsTouched(): void {
+        this.userForm.markAllAsTouched();
+        this.userForm.markAsDirty();
+        this.userForm.updateValueAndValidity();
+    }
 
+    public saveData(): void {
+        if (this.userForm.invalid) {
+            this.markFormAsTouched();
         } else {
-            this.usersService.createNewUserLocalStorage(userItem);
+            const userItem = new UsersItemRequest(this.userForm.getRawValue());
+            if (this.isEditionMode) {
+                this.usersService.saveEditedUserLocalStorage(userItem);
+            } else {
+                this.usersService.createNewUserLocalStorage(userItem);
+            }
+            this.updateList.emit();
+            this.closeModal();
         }
-        this.updateList.emit();
-        this.closeModal();
     }
 
 }

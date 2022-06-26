@@ -15,7 +15,8 @@
     <div class="mt-6 columns is-desktop is-multiline has-text-left">
         <div class="column is-narrow" *ngFor="let user of usersService.usersList">
             <div style="width: 400px;">
-                <feb-edition-card [enableEditBtn]="canEnableButtons(user)" [enableDeleteBtn]="canEnableButtons(user)">
+                <feb-edition-card [enableEditBtn]="canEnableButtons(user)" [enableDeleteBtn]="canEnableButtons(user)"
+                    (onEditClick)="editUser(user)">
                     <div class="feb-block">
                         <strong>{{ user.name }}</strong>.
                     </div>

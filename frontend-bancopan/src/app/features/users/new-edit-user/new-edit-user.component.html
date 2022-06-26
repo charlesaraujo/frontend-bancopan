@@ -49,7 +49,7 @@
             </div>
         </section>
         <footer class="modal-card-foot">
-            <button class="button is-success" (click)="saveData()">Save changes</button>
+            <button class="button is-info" (click)="saveData()">{{ isEditionMode ? 'Salvar alterações' : 'Cadastrar usuário' }}</button>
             <button class="button" (click)="closeModal()">Cancelar</button>
         </footer>
     </div>

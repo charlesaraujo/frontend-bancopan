@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { UserModel } from '../models/users-list.model';
-import { NewEditUserComponent } from '../new-edit-user/new-edit-user.component';
 import { UsersService } from '../services/users.service';
 
 @Component({
@@ -35,6 +34,11 @@ export class UsersListComponent implements OnInit {
 
     public showNewEditUserModal(): void {
         this.newEditUserComponent.isModalActive = true;
+    }
+
+    public editUser(user: UserModel): void {
+        this.newEditUserComponent.setForEditUser(user);
+        this.showNewEditUserModal();
     }
 
 }
