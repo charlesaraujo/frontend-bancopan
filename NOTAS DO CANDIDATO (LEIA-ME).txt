@@ -1,0 +1,9 @@
+O projeto encontra-se na pasta ./frontend-bancopan
+O projeto BUILDADO encontra-se em ./frontend-bancopan-build
+    Para facilitar, fiz upload do projeto buildado no link http://frontend-bancopan.jmarcossouza.com
+
+Por favor, assim de usar o site, leia as Notas do desenvolvedor, localizadas na página inicial do projeto.
+
+Obs: Não cobri 100% de todo o código e também não criei comentários de tudo porque não tive tempo.
+
+Criado por: João Marcos Alencar de Souza
