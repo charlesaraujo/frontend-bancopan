@@ -1,0 +1,79 @@
+
+:root {
+  --blue: #03a9f4;
+  --white: #ffffff;
+  --red: #eb4a46;
+}
+
+.btn{
+  cursor: pointer;
+  border: none;
+}
+
+.btn.btn-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+	text-align: center;
+  padding: 10px 48px;
+	margin-bottom: 10px;
+  border-radius: 40px;
+  background: var(--blue);
+  color: var(--white);
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.1);
+}
+
+.btn.btn-small {
+  position: relative;
+  display: block;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--red);
+  box-shadow: 2px 2px 2px rgb(0, 0, 0, 0.1);
+}
+
+.btn.btn-small.btn-delete {
+  background: var(--red);
+}
+
+.btn.btn-add-svg {
+  background: none;
+  box-shadow: none;
+  margin-left: 5px;
+}
+.btn.btn-add-svg svg {
+  transform: rotate(45deg);
+  position: relative;
+}
+
+.btn.btn-small.btn-edit {
+  background: var(--blue);
+  margin-bottom: 12px;
+}
+
+.btn.btn-small.btn-edit svg {
+  top: 3px;
+  position: relative;
+}
+
+.btn.btn-small:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: '';
+  width: 16px;
+  height: 16px;
+  display: block;
+  border: 1.5px solid var(--white);
+  border-radius: 50%;
+}
+
+.btn.btn-close {
+  position: absolute;
+  right: 10px;
+  background: var(--red);
+}

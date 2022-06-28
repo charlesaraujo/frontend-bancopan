@@ -1,0 +1,24 @@
+@import url('_typography.css');
+@import url('_modal.css');
+@import url('_form.css');
+@import url('_buttons.css');
+@import url('_list.css');
+
+:root {
+  --white: #FFFFFF;
+  --black: #000000;
+  --red: #EB4A46;
+  --blue: #03A9F4;
+  --shadow: #EAEAEA;
+  --green: #00A000;
+  --gray: #A6A6A6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  padding: 20px 0 0;
+  text-align: center;
+}

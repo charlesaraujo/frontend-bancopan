@@ -1,0 +1,41 @@
+
+#list-users{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#list-users #users{
+	width: 100%;
+}
+
+#list-users #users .user {
+  padding: 10px;
+  margin: 15px 10px;
+  border-radius: 7px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+  border-left: 6px solid var(--blue);
+  position: relative;
+}
+
+#list-users #users .user h2{
+	margin: 0 0 5px;
+}
+
+#list-users #users .user p{
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#list-users #users .user p strong{
+  color: var(--black);
+}
+
+
+#list-users #users .area-buttons {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  margin: 0 auto;
+}
