@@ -1,0 +1,101 @@
+<div class="cabecalho">
+  <h1>Banco Pan</h1>
+  <button class="adicionar" (click)="toggleCadastro()">
+    Adicionar usuário
+    <fa-icon [icon]="faPlus" [styles]="{color: '#ffffff'}"></fa-icon>
+  </button>
+</div>
+<ng-container *ngIf="mostrarCadastro">
+  <div class="modalCadastro">
+    <div class="cadastro">
+      <div>
+        <h2>Cadastrar usuário</h2>
+      </div>
+      <div>
+        <button class="excluir botoes" (click)="closeModalCadastro(cadastroUsuario)">
+          <fa-icon [icon]="faX" [styles]="{color: '#ffffff'}">
+          </fa-icon>
+        </button>
+      </div>
+    </div>
+    <div>
+      <form id="add-form" (ngSubmit)="cadastroUsuario.form.valid && saveUsuario(cadastroUsuario)" #cadastroUsuario="ngForm" novalidate>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="usuario.name" id="name" name="name" #name="ngModel" required class="form-control"  placeholder="Nome completo (sem abreviações)">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="usuario.cpf" id="cpf" name="cpf" #cpf="ngModel" required class="form-control"  placeholder="CPF">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="usuario.phone" id="phone" name="phone" #phone="ngModel" required class="form-control"  placeholder="Telefone">
+        </div>
+        <div class="form-group">
+          <input type="text" [(ngModel)]="usuario.email" id="email" name="email" #email="ngModel" required class="form-control"  placeholder="E-mail">
+      </div>
+        <button class="adicionar"type="submit">Adicionar</button>
+      </form>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</ng-container>
+<ng-container *ngIf="mostrarEditar">
+  <div class="modalCadastro">
+    <div class="cadastro">
+      <div>
+        <h2>Atualizar usuário</h2>
+      </div>
+      <div>
+        <button class="excluir botoes" (click)="closeModalEditar()">
+          <fa-icon [icon]="faX" [styles]="{color: '#ffffff'}">
+          </fa-icon>
+        </button>
+      </div>
+    </div>
+    <div>
+      <form id="add-form" (ngSubmit)="saveUsuario(editarUsuario)" #editarUsuario="ngForm">
+        <div class="form-group">
+            <label for="name">Nome: </label>
+            <input type="text" [(ngModel)]="usuario.name" id="name" name="name" #name="ngModel" class="form-control"  placeholder="Nome completo (sem abreviações)">
+        </div>
+        <div class="form-group">
+            <label for="cpf">CPF: </label>
+            <input type="text" [(ngModel)]="usuario.cpf" id="cpf" name="cpf" #cpf="ngModel" class="form-control"  placeholder="CPF">
+        </div>
+        <div class="form-group">
+            <label for="phone">Telefone: </label>
+            <input type="text" [(ngModel)]="usuario.phone" id="phone" name="phone" #phone="ngModel" class="form-control"  placeholder="Telefone">
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail: </label>
+          <input type="text" [(ngModel)]="usuario.email" id="email" name="email" #email="ngModel" class="form-control"  placeholder="E-mail">
+      </div>
+        <button class="adicionar"type="submit">Atualizar usuário</button>
+      </form>
+    </div>
+  </div>
+  <div class="overlay"></div>
+</ng-container>
+<div class="container">
+  <div *ngFor="let usuario of usuarios">
+    <div class="card">
+      <div class="dados">
+        <h3>{{usuario.name}}</h3>
+        <p><strong>Cpf: </strong>{{usuario.cpf}}</p>
+        <p><strong>Telefone: </strong>{{usuario.phone}}</p>
+        <p><strong>E-mail: </strong>{{usuario.email}}</p>
+      </div>
+      <div class="botoes">
+        <div>
+          <button class="editar">
+            <fa-icon (click)="toggleEditar(usuario)" [icon]="faPen" [styles]="{color: '#ffffff'}"></fa-icon>
+          </button>
+        </div>
+        <div>
+          <button (click)="deleteUsuario(usuario)" class="excluir">
+            <fa-icon [icon]="faX" [styles]="{color: '#ffffff'}"></fa-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
