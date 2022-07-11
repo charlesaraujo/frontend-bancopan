@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 2131232143244545,
+      "name": "fulano de tal",
+      "email": "fulano@gmail.com",
+      "phone": "dwdwd",
+      "cpf": "2131232143244545"
+    },
+    {
+      "id": 2343243,
+      "name": "fulano de tal",
+      "email": "MAGICO@GMAIL.COM",
+      "phone": "32432432",
+      "cpf": "2343243"
+    }
+  ]
+}

@@ -1,55 +1,57 @@
-<img src="https://www.bancopan.com.br/bancopan-institucional/conteudo/estrutura/assets/img/mh-icons/mh-icon--logo-desktop.svg" width="120" alt="Banco Pan">
+# Front-end Banco Pan
+Teste Front-end Banco Pa 
 
-# Front-end
+Tecnologias utilizadas
+-----------
+- Javascript
+- Typescript
+- ReactJS
 
-Bem-vindo(a) ao nosso teste para desenvolvedor(a) front-end.
+Instalação
+-----------
+No diretorio home do projeto execute o comando:
+```
+npm install
+```
 
-## Sobre o teste
+Servidor Local
+-----------
+Para esse projeto foi utilizado o json server com servidor local.
+No diretorio home do projeto execute o comando:
+```
+npm run server
+```
 
-Nosso teste consiste em codificar uma interface baseado nas imagens a baixo:
+Paginas
+-----------
+O projeto contém 2 paginas responsivas  que são Home , CreateUser , 1 modal para editar o usuário, 1 modal para remover o usuário.
 
-#### Home
+projetoContem no caminho ```/src/components/``` os Componetes Input e Header reutilizaveis na aplicação
 
-<img src="layout/home.png" width="400" alt="Banco Pan">
+Outros projetos de Portfólio:
 
-#### Cadastro
+Projetos Angular:
 
-<img src="layout/cadastro.png" width="400" alt="Banco Pan">
+https://github.com/elvisthermo/angular-passaro-urbano
+https://github.com/elvisthermo/crudAplication
 
-## Requisitos
+Projetos React:
 
-### Requisitos obrigatórios
+https://github.com/elvisthermo/WEB-Projeto-agendamento-de-consultas
 
-- Documentação
-  - Instruções de instalação, inicialização e testes
-  - Descrição sobre as tecnologias utilizadas no projeto
-- Design responsivo
-- Use endpoint a seguir para pegar os dados iniciais dos usuários.
-  - GET: https://private-56d1e-charlesaraujodasilva.apiary-mock.com/users
-- Utilize os cookies ou localstorage como banco de dados.
-- Deve conter cadastro e remoção de usuário, edição é opcional.
-- Pelo menos uma estratégia para organização do CSS
+https://github.com/elvisthermo/gofinances-front-end
 
-### Você pode
+https://github.com/elvisthermo/react-form-categorizacao
 
-- Utilizar qualquer framework JS moderno (Angular, React, Vue...)
-- Utilizar bibliotecas para o gerenciamento de estado (NGRX, Redux, Vuex...)
-- Utilizar pré ou pós-processadores de CSS, bem como frameworks e/ou starterpacks (Sass, PostCSS, CSS Modules, Styled Components...)
-- Alterar a proposta do layout caso necessário
+Projetos VanilaJs
+https://github.com/elvisthermo/airbnb-page
 
-### O que gostaríamos de ver
+https://github.com/elvisthermo/Covid19-PA
 
-- Apesar de frameworks e libs ajudarem muito no nosso dia a dia, gostaríamos muito mais de ver o seu código em Vanilla JS
-- Testes unitários, e2e e/ou coverage
-- Uma arquitetura consistente, focada na simplicidade do projeto
-- Justifique a utilização das tecnologias adotadas - quais foram os pontos positivos e negativos que elas trouxeram?
+Lib de graficos Com D3.JS:
 
-### Por fim
+https://github.com/LABVIS-UFPA/vistechlib
 
-A ideia não é prescrever uma receita exata de como o desafio deve ser resolvido. Por isso, resolva-o da forma que achar melhor. O importante para nós é entender como você codifica uma interface e seu fluxo de trabalho. Além disso, considere que estamos à disposição para qualquer dúvida!
+Aplicação desktop com electron js:
 
-Usamos o mesmo teste para todos os níveis: **Junior**, **Pleno** e **Senior**; mas procuramos adequar nossa exigência na avaliação com cada um desses níveis.
-
-## Entrega
-
-Para enviar seu código, você deve fazer um fork deste repositório, criar uma branch com o seu nome e enviar um pull request.
+https://github.com/LABVIS-UFPA/VisApplication

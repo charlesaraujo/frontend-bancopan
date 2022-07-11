@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="32mm"
+   height="32mm"
+   viewBox="0 0 32 32"
+   version="1.1"
+   id="svg990"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   sodipodi:docname="banco_pan.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview992"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="mm"
+     width="16mm"
+     inkscape:zoom="2.7865881"
+     inkscape:cx="23.864309"
+     inkscape:cy="82.897074"
+     inkscape:window-width="1920"
+     inkscape:window-height="986"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs987" />
+  <g
+     inkscape:label="Camada 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       id="g671"
+       transform="matrix(0.06877988,0,0,0.06961457,-14.27678,-5.8760799)">
+      <path
+         style="fill:#02aefd;stroke:none"
+         d="m 321.85246,106.09654 c -12.834,1.7058 -24.97001,3.2811 -37,8.4483 -58.245,25.0173 -55,86.0413 -55,139.1273 v 117 c 0,40.333 -7.63601,90.703 18.50299,125 24.71801,32.431 60.31401,38 98.49701,38 h 147 c 29.11599,0 59.18499,2.236 88,-2.438 35.787,-5.806 63.91399,-33.907 72.52499,-68.562 6.21001,-24.995 3.47501,-52.466 3.47501,-78 v -134 c 0,-35.632 4.301,-75.351 -17.746,-106 -18.38301,-25.5557 -44.442,-34.6132 -74.254,-38.5756 -13.63801,-1.8127 -28.247,-0.4244 -42,-0.4244 h -80 -80 c -13.753,0 -28.36201,-1.3883 -42,0.4244 m 95,275.5756 v 36 h -40 v -76 c 0,-20.152 -1.084,-38.87 9.288,-57 27.95299,-48.862 98.615,-39.712 120.39999,9 23.578,52.724 -36.42499,116.066 -89.68799,88 m 25,-89.522 c -34.90801,3.967 -30.96401,58.914 4,55.218 35.649,-3.768 31.672,-59.271 -4,-55.218 z"
+         id="path399" />
+      <rect
+         style="fill:#000000;fill-rule:evenodd"
+         id="rect521"
+         width="45.491802"
+         height="47.950821"
+         x="304.91803"
+         y="177.04918" />
+    </g>
+  </g>
+</svg>
