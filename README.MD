@@ -28,8 +28,9 @@ O projeto contém 2 paginas responsivas  que são Home , CreateUser , 1 modal pa
 
 projetoContem no caminho ```/src/components/``` os Componetes Input e Header reutilizaveis na aplicação
 
-Outros projetos de Portfólio:
 
+Outros projetos de Portfólio:
+-----------
 Projetos Angular:
 
 https://github.com/elvisthermo/angular-passaro-urbano
