@@ -1,27 +1,27 @@
 # FrontendBancopan
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.2.
+Para realizaçãodo teste deste programa deve ser instalado o nodeJs
+https://nodejs.org/en/
 
-## Development server
+Após a instalação deve ser instalado o angular cli para pode execultado o serviço local
+https://angular.io/cli
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+dentro do projeto deve ser execultado o compando "npm install" para instalação das bibliotecas.
 
-## Code scaffolding
+Após a instalação pode ser execultado o comando "ng server" ou "ng s" para execultado o serviço local
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Descrição da tecnologia
 
-## Build
+Foi utilizado o angular para realização deste teste, um framework criado pela google atualmente estando na versão 14.0.6, trabalhando com typescript trazendo a possibilidade de tipar os dados o tornando mais seguro para implementações grandes, nesse podemos trabalhar com componentes modularizados e componentes comparilhados.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Eventos de saida e entrada podem ser trabalhados dentro desta tecnologia.
 
-## Running unit tests
+Trabalhar com serviços também é uma das tecnologias que o angular nos traz podendo utilizar obsarvables ou promisses, no caso deste projeto foi utilizado observalhes e chamadas httpClient.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Foi utilizando a biblioteca material angular para utilização de alguns estilos.
+ dentro de um componente possue
+  - Arquivo ts
+  - Arquivo scss
+  - Arquivo html
+  - Arquivo ts de teste.
