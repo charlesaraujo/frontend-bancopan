@@ -1,0 +1,21 @@
+<div *ngFor="let user of listaUsuario; let i = index" [attr.data-index]="i">
+  <mat-card class="mt-20 card-border">
+    <mat-card-title>{{ user.name }}</mat-card-title>
+    <mat-card-content>
+      <div class="example-button-container">
+        <button
+        (click)="delete(i)"
+          class="button-right"
+          mat-fab
+          color="warn"
+          aria-label="Example icon button with a heart icon"
+        >
+          <mat-icon>delete</mat-icon>
+        </button>
+      </div>
+      <p><strong>CPF: </strong>{{ user.cpf }}</p>
+      <p><strong>E-mail: </strong>{{ user.email }}</p>
+      <p><strong>Telefone: </strong> {{ user.phone }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>

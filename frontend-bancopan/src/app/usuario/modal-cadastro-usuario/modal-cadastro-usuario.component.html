@@ -1,0 +1,40 @@
+<h2 mat-dialog-title>Cadastro usuário</h2>
+<form class="example-form" [formGroup]="form" (ngSubmit)="cadastrar()">
+  <mat-dialog-content class="mat-typography">
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Nome completo</mat-label>
+        <input matInput formControlName="name" placeholder="Nome completo" />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>E-mail</mat-label>
+        <input matInput formControlName="email" placeholder="E-mail" />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>CPF</mat-label>
+        <input matInput formControlName="cpf" placeholder="CPF" />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input matInput formControlName="phone" placeholder="Telefone" />
+      </mat-form-field>
+    </p>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button
+      mat-button
+      [disabled]="form.invalid"
+      cdkFocusInitial
+      [mat-dialog-close]="true"
+      type="submit"
+    >
+      Cadastrar usuário
+    </button>
+  </mat-dialog-actions>
+</form>
