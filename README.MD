@@ -14,7 +14,7 @@ $ git clone https://github.com/Matheuscara/frontend-bancopan
 $ cd frontend-bancopan-matheusdias
 ```
 
-O proximo passo é iniciar o projeto;
+O proximo passo é baixar as bibliotecas e iniciar o projeto;
 
 ```bash
 npm install
@@ -59,8 +59,6 @@ A minha intenção foi desenvolver uma solução que pudesse ser escalável, cri
 ---
 
 ## Minhas Dificuldades:
-
-As minhas dificuldades foram:
 
 Estava muito tempo sem desenvolver com Ts, isso me atrasou, mas ficou simples depois de um tempo.
 
