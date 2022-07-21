@@ -10,7 +10,7 @@
 Nosso primeiro passo é clonar o projeto e entrar na pasta do projeto;
 
 ```bash
-$ git clone https://github.com/Brunoocn/frontend-bancopan.git
+$ git clone https://github.com/Matheuscara/frontend-bancopan
 $ cd frontend-bancopan-matheusdias
 ```
 
