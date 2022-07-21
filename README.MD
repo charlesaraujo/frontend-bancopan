@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Banco Pan" src="src/assets/Images/pan.png" width="360px">
+  <img alt="Banco Pan" src="frontend-bancopan-matheusdias/src/assets/Images/pan.png" width="360px">
 </p>
 
 <br>
