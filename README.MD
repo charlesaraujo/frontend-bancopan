@@ -1,55 +1,42 @@
-<img src="https://www.bancopan.com.br/bancopan-institucional/conteudo/estrutura/assets/img/mh-icons/mh-icon--logo-desktop.svg" width="120" alt="Banco Pan">
+<p align="center">
+  <img alt="Banco Pan" src="src/assets/Images/pan.png" width="360px">
+</p>
 
-# Front-end
+<br>
 
-Bem-vindo(a) ao nosso teste para desenvolvedor(a) front-end.
+## Inicializar Projeto Através do NPM
 
-## Sobre o teste
 
-Nosso teste consiste em codificar uma interface baseado nas imagens a baixo:
+Nosso primeiro passo é clonar o projeto e entrar na pasta do projeto;
 
-#### Home
+```bash
+$ git clone https://github.com/Brunoocn/frontend-bancopan.git
+$ cd frontend-bancopan-matheusdias
+```
 
-<img src="layout/home.png" width="400" alt="Banco Pan">
+O proximo passo é iniciar o projeto;
 
-#### Cadastro
+```bash
+npm install
+npm start
+```
 
-<img src="layout/cadastro.png" width="400" alt="Banco Pan">
+## Vamos Testar nossa aplicação com o Jest
 
-## Requisitos
+Para inicializar os testes:
 
-### Requisitos obrigatórios
+```bash
+npm install
+npm start
+```
 
-- Documentação
-  - Instruções de instalação, inicialização e testes
-  - Descrição sobre as tecnologias utilizadas no projeto
-- Design responsivo
-- Use endpoint a seguir para pegar os dados iniciais dos usuários.
-  - GET: https://private-56d1e-charlesaraujodasilva.apiary-mock.com/users
-- Utilize os cookies ou localstorage como banco de dados.
-- Deve conter cadastro e remoção de usuário, edição é opcional.
-- Pelo menos uma estratégia para organização do CSS
+## Tecnologias: 
 
-### Você pode
+O desenvolvimento se consiste em tais bibliotecas:
 
-- Utilizar qualquer framework JS moderno (Angular, React, Vue...)
-- Utilizar bibliotecas para o gerenciamento de estado (NGRX, Redux, Vuex...)
-- Utilizar pré ou pós-processadores de CSS, bem como frameworks e/ou starterpacks (Sass, PostCSS, CSS Modules, Styled Components...)
-- Alterar a proposta do layout caso necessário
-
-### O que gostaríamos de ver
-
-- Apesar de frameworks e libs ajudarem muito no nosso dia a dia, gostaríamos muito mais de ver o seu código em Vanilla JS
-- Testes unitários, e2e e/ou coverage
-- Uma arquitetura consistente, focada na simplicidade do projeto
-- Justifique a utilização das tecnologias adotadas - quais foram os pontos positivos e negativos que elas trouxeram?
-
-### Por fim
-
-A ideia não é prescrever uma receita exata de como o desafio deve ser resolvido. Por isso, resolva-o da forma que achar melhor. O importante para nós é entender como você codifica uma interface e seu fluxo de trabalho. Além disso, considere que estamos à disposição para qualquer dúvida!
-
-Usamos o mesmo teste para todos os níveis: **Junior**, **Pleno** e **Senior**; mas procuramos adequar nossa exigência na avaliação com cada um desses níveis.
-
-## Entrega
-
-Para enviar seu código, você deve fazer um fork deste repositório, criar uma branch com o seu nome e enviar um pull request.
+- [React](https://reactjs.org)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Redux toolkit](https://redux-toolkit.js.org/)
+- [Redux](https://redux.js.org/)
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom)
+- [jest](https://jestjs.io/pt-BR/)
