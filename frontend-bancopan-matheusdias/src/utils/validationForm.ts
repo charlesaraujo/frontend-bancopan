@@ -19,7 +19,7 @@ export function validationTelefone(value:string) {
 }
 
 export function validationCaracterLength(value:string, quantity:number) {
-    return value.length >= 20;
+    return value.length >= quantity;
 }
 
 export function validationInputs(isNome:string, isEmail:string, isCpf:string, isCell:string) {

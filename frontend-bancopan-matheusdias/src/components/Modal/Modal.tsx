@@ -73,7 +73,7 @@ export const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose }) => {
             <div className={'modal-box'}>
                 <div className={"line-top"}/>
                 <div className={"line-bottom"}/>
-                <div className={'modal-top'}>
+                <div data-testid={title} className={'modal-top'}>
                     {title}
                     <ButtonIcon BeIcon={true} function={() => {
                         resetInputs()
@@ -81,7 +81,7 @@ export const Modal: React.FC<ModalProps> = ({ title, isOpen, onClose }) => {
                     }}/>
                 </div>
                 <div className={'modal-content'}>
-                    <div className={"formulario"}>
+                    <div data-testid={"modal-input"} className={"formulario"}>
                         <InputComponent onChange={setNome} id={"nome"} type={"text"} placehouder={"Nome Completo"} required={true}/>
                         <InputComponent onChange={setEmail} id={"email"} type={"email"} placehouder={"E - mail"} required={true}/>
                         <InputComponent onChange={setCpf} id={"cpf"} type={"text"}  minLength={11} placehouder={"CPF"} required={true}/>

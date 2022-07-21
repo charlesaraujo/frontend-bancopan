@@ -16,8 +16,8 @@ interface ButtonIconComponent {
 function InputComponent(props: ButtonIconComponent) {
 
     return (
-        <div className="input-container">
-            <input id={props.id}
+        <div data-testid={"input-container"} className="input-container">
+            <input data-testid={`input-container-${props.id}`} id={props.id}
                    className={props.class || "inputClass"}
                    required={props.required}
                    onChange={(e) => props.onChange(e.target.value)}
