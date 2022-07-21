@@ -1,0 +1,69 @@
+
+.user-title {
+    font-size: var(--font-Size-3);
+    font-weight: var(--font-Weight-2);
+    padding: 1% 0;
+}
+
+.user-container {
+    position: relative;
+    margin: 10px;
+    padding: 2% 2% 2% 2%;
+    -webkit-box-shadow: 2px 3px 4px 0px rgba(50, 50, 50, 0.66);
+    -moz-box-shadow:    2px 3px 4px 0px rgba(50, 50, 50, 0.66);
+    box-shadow:         2px 3px 4px 0px rgb(50 50 50 / 13%);
+    border-radius: var(--border-Radius-1);
+    background-color: var(--color-4);
+}
+
+.user-caracterValue {
+    font-weight: var(--font-Weight-2);
+}
+
+.user-backgroundBoard {
+    position: absolute;
+    z-index: -1;
+    width: 5%;
+    height: 100%;
+    background-color: var(--color-1);
+    border-radius: var(--border-Radius-1);
+    top: 0%;
+    left: -2%;
+}
+
+.button-edit-Icon {
+    border: none;
+    background-color: var(--color-1);
+    width: 1.5em;
+    height: 1.5em;
+    padding: 2px;
+    border-radius: var(--border-Radius-0);
+    font-size: var(--font-Size-3);
+}
+
+@media screen and (min-width: 900px) {
+    .icons-users {
+        display: flex;
+        margin: 10px 0px;
+        justify-content: space-evenly;
+    }
+}
+
+
+@media screen and (max-width: 900px) {
+    .user-container {
+        margin: 10px 0;
+    }
+
+    .icons-users  {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: 10px;
+        top: 0px;
+        justify-content: space-evenly;
+        height: 100%;
+    }
+
+}
+

@@ -1,0 +1,102 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    cursor: pointer;
+}
+
+.modal-box {
+    position: relative;
+    width: 80%;
+    margin: 0 10%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background-color: white;
+    cursor: auto;
+    max-width: 500px;
+}
+
+.line-top {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-2);
+    border-radius: var(--border-Radius-1);
+    top: 46px;
+    left: 0%;
+    opacity: 40%;
+}
+
+.line-bottom {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-2);
+    border-radius: var(--border-Radius-1);
+    bottom: 81px;
+    left: 0%;
+    opacity: 40%;
+}
+
+.modal-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-Size-2);
+    align-items: center;
+}
+
+.modal-content {
+    margin: 10px 0;
+    color: var(--color-7);
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.buttom-cadastrar {
+    align-items: center;
+    padding: 11px;
+    display: flex;
+    align-content: center;
+    width: 80%;
+    justify-content: space-around;
+    background-color: var(--color-1);
+    font-weight: var(--font-Weight-3);
+    border: none;
+    border-radius: var(--border-Radius-3);
+    color: var(--color-4);
+    margin: 21px auto 0px auto;
+    font-size: var(--font-Size-3);
+}
+
+button:disabled,
+button[disabled]{
+    background-color: var(--color-8);
+}
+
+@media screen and (min-width: 800px) {
+    .modal__box {
+        max-width: 600px;
+        margin: 0 30px;
+    }
+}

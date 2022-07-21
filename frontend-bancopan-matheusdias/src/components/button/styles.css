@@ -1,0 +1,33 @@
+
+
+.buttonIcon-container {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+
+.buttonIcon {
+    align-items: center;
+    padding: 2%;
+    display: flex;
+    align-content: center;
+    width: 12em;
+    justify-content: space-around ;
+    background-color: var(--color-1);
+    font-weight: var(--font-Weight-3);
+    border: none;
+    border-radius: var(--border-Radius-3);
+    color: var(--color-4);
+}
+
+.icon {
+    color: var(--color-4) ;
+}
+
+@media screen and (min-width: 800px) {
+
+}
+
+
+@media screen and (max-width: 800px) {
+}
