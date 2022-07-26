@@ -1,0 +1,9 @@
+.msg-erro {
+color: rgb(255, 68, 68);
+margin-top: 5px;
+animation: fadeIn 0.4s;
+}
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
