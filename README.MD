@@ -1,55 +1,27 @@
-<img src="https://www.bancopan.com.br/bancopan-institucional/conteudo/estrutura/assets/img/mh-icons/mh-icon--logo-desktop.svg" width="120" alt="Banco Pan">
+# TesteBancoPan
 
-# Front-end
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
-Bem-vindo(a) ao nosso teste para desenvolvedor(a) front-end.
+## Development server
 
-## Sobre o teste
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-Nosso teste consiste em codificar uma interface baseado nas imagens a baixo:
+## Code scaffolding
 
-#### Home
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-<img src="layout/home.png" width="400" alt="Banco Pan">
+## Build
 
-#### Cadastro
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-<img src="layout/cadastro.png" width="400" alt="Banco Pan">
+## Running unit tests
 
-## Requisitos
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-### Requisitos obrigatórios
+## Running end-to-end tests
 
-- Documentação
-  - Instruções de instalação, inicialização e testes
-  - Descrição sobre as tecnologias utilizadas no projeto
-- Design responsivo
-- Use endpoint a seguir para pegar os dados iniciais dos usuários.
-  - GET: https://private-56d1e-charlesaraujodasilva.apiary-mock.com/users
-- Utilize os cookies ou localstorage como banco de dados.
-- Deve conter cadastro e remoção de usuário, edição é opcional.
-- Pelo menos uma estratégia para organização do CSS
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-### Você pode
+## Further help
 
-- Utilizar qualquer framework JS moderno (Angular, React, Vue...)
-- Utilizar bibliotecas para o gerenciamento de estado (NGRX, Redux, Vuex...)
-- Utilizar pré ou pós-processadores de CSS, bem como frameworks e/ou starterpacks (Sass, PostCSS, CSS Modules, Styled Components...)
-- Alterar a proposta do layout caso necessário
-
-### O que gostaríamos de ver
-
-- Apesar de frameworks e libs ajudarem muito no nosso dia a dia, gostaríamos muito mais de ver o seu código em Vanilla JS
-- Testes unitários, e2e e/ou coverage
-- Uma arquitetura consistente, focada na simplicidade do projeto
-- Justifique a utilização das tecnologias adotadas - quais foram os pontos positivos e negativos que elas trouxeram?
-
-### Por fim
-
-A ideia não é prescrever uma receita exata de como o desafio deve ser resolvido. Por isso, resolva-o da forma que achar melhor. O importante para nós é entender como você codifica uma interface e seu fluxo de trabalho. Além disso, considere que estamos à disposição para qualquer dúvida!
-
-Usamos o mesmo teste para todos os níveis: **Junior**, **Pleno** e **Senior**; mas procuramos adequar nossa exigência na avaliação com cada um desses níveis.
-
-## Entrega
-
-Para enviar seu código, você deve fazer um fork deste repositório, criar uma branch com o seu nome e enviar um pull request.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

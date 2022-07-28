@@ -1,0 +1,34 @@
+{
+  "HEADER": {
+      "TITLE": "Banco Pan"
+  },
+  "FOOTER": {
+    "TITLE": "Desenvolvido por Maike Schuerzoski 2022"
+  },
+  "HOME": {
+    "BTN": {
+      "ADD_USER": "Adicionar Usuário"
+    },
+    "TOOLTIP": {
+      "EDIT_USER": "Editar Usuário",
+      "DEL_USER": "Deletear Usuário"
+    }
+  },
+  "COMMON": {
+      "MESSAGES": {
+        "SUCESS": "Dados Salvos com Sucesso!",
+        "EDIT": "Dados Editados com Sucesso!",
+        "ADD": "Dados Inseridos com Sucesso",
+        "YES": "Sim",
+        "NO": "Não"
+      },
+      "DIALOG_CONFIRM_DELETE": {
+        "TITLE": "Confirmar Exclusão",
+        "MESSAGE": "Deseja excluir o CPF: {{cpf}} ?"
+      },
+      "DIALOG_USER": {
+        "ADD_USER": "Cadastrar Usuário",
+        "EDIT_USER": "Editar Usuário {{cpf}}"
+      }
+  }
+}

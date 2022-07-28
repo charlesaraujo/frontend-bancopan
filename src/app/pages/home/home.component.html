@@ -1,0 +1,40 @@
+<app-header></app-header>
+<div class="container-home">
+  <div class="container-home__header">
+    <button mat-raised-button (click)="crudUser('new')" color="primary">{{ 'HOME.BTN.ADD_USER' | translate }}
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+  <div class="container-home__list-users">
+    <ng-container *ngIf="users && users.length > 0; else elseTemplate">
+      <ng-container *ngFor="let user of users">
+        <mat-card>
+          <section>
+            <div class="users">
+              <h3>
+                <p><strong>{{ user.name }}</strong></p>
+              </h3>
+              <p><strong>CPF: </strong> {{ user.cpf }}</p>
+              <p><strong>Email: </strong>{{ user.email }}</p>
+              <p><strong>Telefone: </strong>{{ user.phone }}</p>
+            </div>
+            <div class="btn">
+              <button mat-raised-button color="primary" (click)="crudUser('edit', user)"
+                matTooltip="{{ 'HOME.TOOLTIP.EDIT_USER' | translate }}">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-raised-button color="warn" (click)="deleteuser(user.cpf)"
+                matTooltip="{{ 'HOME.TOOLTIP.DEL_USER' | translate }}">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+          </section>
+        </mat-card>
+      </ng-container>
+    </ng-container>
+    <ng-template #elseTemplate>
+      <h4>{{ 'HOME.MESSAGES.NO_DATA' | translate }} </h4>
+    </ng-template>
+  </div>
+</div>
+<app-footer></app-footer>

@@ -1,0 +1,63 @@
+<div class="container-dialog-user">
+  <div class="container-dialog-user__title">
+    <h2 mat-dialog-title>
+      <mat-icon>{{data.isEdition ? 'edit': 'add' }}</mat-icon>
+      {{ data.isEdition ? translate.instant('DIALOG_USER.EDIT_USER', {cpf: data.user.cpf }) : 'DIALOG_USER.ADD_USER' |
+      translate }}
+    </h2>
+  </div>
+  <form [formGroup]="userForm">
+    <div class="container-dialog-user__form">
+      <div mat-dialog-content>
+        <mat-form-field class="field" [hideRequiredMarker]="true">
+          <mat-label>{{'DIALOG_USER.FORM.NAME' | translate}}</mat-label>
+          <input matInput formControlName="name" placeholder="{{'DIALOG_USER.PLACEHOLDER.NAME' | translate}}"
+            required />
+          <mat-error *ngIf="userForm.controls['name'].errors?.['required']">{{'DIALOG_USER.ERRORS.NAME' |
+            translate}}</mat-error>
+          <mat-error *ngIf="userForm.controls['name'].errors?.['pattern']">{{'DIALOG_USER.ERRORS.NAME_INVALID' |
+            translate}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" [hideRequiredMarker]="true">
+          <mat-label>{{'DIALOG_USER.FORM.EMAIL' | translate}}</mat-label>
+          <input matInput formControlName="email" placeholder="{{'DIALOG_USER.PLACEHOLDER.EMAIL' | translate}}"
+            required />
+          <mat-error *ngIf="userForm.controls['email'].errors?.['required']">{{'DIALOG_USER.ERRORS.EMAIL' |
+            translate}}</mat-error>
+          <mat-error *ngIf="userForm.controls['email'].errors?.['pattern']">{{'DIALOG_USER.ERRORS.EMAIL_INVALID' |
+            translate}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" *ngIf="!data.isEdition" [hideRequiredMarker]="true">
+          <mat-label>{{'DIALOG_USER.FORM.CPF' | translate}}</mat-label>
+          <input matInput formControlName="cpf" mask="000.000.000-00"
+            placeholder="{{'DIALOG_USER.PLACEHOLDER.CPF' | translate}}" ng-readonly="!data.isEdition" required />
+          <mat-hint>{{'DIALOG_USER.FORM.CPF_NUMBERS' | translate}}</mat-hint>
+          <mat-error *ngIf="userForm.controls['cpf'].errors?.['required']">{{'DIALOG_USER.ERRORS.CPF' |
+            translate}}</mat-error>
+          <mat-error *ngIf="userForm.controls['cpf'].errors?.['minlength']">{{'DIALOG_USER.ERRORS.CPF_LENGTH' |
+            translate}}</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="field" [hideRequiredMarker]="true">
+          <mat-label>{{'DIALOG_USER.FORM.PHONE' | translate}}</mat-label>
+          <input matInput formControlName="phone" mask="(00) 0 0000-0000"
+            placeholder="{{'DIALOG_USER.PLACEHOLDER.PHONE' | translate}}" required />
+          <mat-error *ngIf="userForm.controls['phone'].errors?.['required']">{{'DIALOG_USER.ERRORS.PHONE' |
+            translate}}</mat-error>
+          <mat-error *ngIf="userForm.controls['phone'].errors?.['minlength']">{{'DIALOG_USER.ERRORS.PHONE_LENGTH' |
+            translate}}
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="container-dialog-user__btn">
+      <button mat-raised-button color="primary" class="form_btn_salvar" (click)="saveOrEditUser()"
+        [disabled]="!userForm.valid">
+        {{ data.isEdition ? translate.instant('DIALOG_USER.BTN.EDIT') : translate.instant('DIALOG_USER.BTN.ADD') }}
+      </button>
+    </div>
+  </form>
+</div>

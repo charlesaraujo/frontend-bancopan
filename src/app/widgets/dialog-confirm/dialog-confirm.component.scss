@@ -1,0 +1,18 @@
+.container-dialog-confirm {
+  &__title {
+    h2 {
+      mat-icon {
+        vertical-align: middle;
+        margin-top: -4px;
+      }
+    }
+  }
+
+  &__message {
+    margin: 50px 0px 20px 0px;
+  }
+
+  .mat-dialog-actions {
+    justify-content: flex-end;
+  }
+}

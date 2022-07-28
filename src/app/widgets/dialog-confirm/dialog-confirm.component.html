@@ -1,0 +1,16 @@
+<div class="container-dialog-confirm">
+  <div class="container-dialog-confirm__title">
+    <h2 mat-dialog-title>
+      <mat-icon>delete</mat-icon> {{ data.title }}
+    </h2>
+  </div>
+  <div class="container-dialog-confirm__message">
+    <div mat-dialog-content>
+      <p>{{ data.message }}</p>
+    </div>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-button (click)="onClick(false)">{{ 'COMMON.MESSAGES.NO' | translate }} </button>
+    <button mat-button (click)="onClick(true)" cdkFocusInitial>{{ 'COMMON.MESSAGES.YES' | translate }}</button>
+  </div>
+</div>
