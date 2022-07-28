@@ -1,0 +1,33 @@
+@import '../../sass/app.scss';
+
+.container-dialog-user {
+  &__title {
+    margin: 0px 0 30px 0px;
+
+    h2 {
+      mat-icon {
+        vertical-align: middle;
+        margin-top: -4px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    margin: 0px 0 40px 0px;
+
+    .field {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+  &__btn {
+    margin: 0px 0 20px 0px;
+
+    button {
+      width: 300px;
+      border-radius: $btn-radius-standard;
+    }
+  }
+}

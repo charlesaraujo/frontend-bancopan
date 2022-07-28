@@ -1,0 +1,67 @@
+{
+    "HEADER": {
+        "TITLE": "Banco Pan"
+    },
+    "FOOTER": {
+      "TITLE": "Desenvolvido por Maike Schuerzoski 2022"
+    },
+    "HOME": {
+      "BTN": {
+        "ADD_USER": "Adicionar Usuário"
+      },
+      "MESSAGES": {
+        "NO_DATA": "Sem Dados para Exibir!"
+      },
+      "TOOLTIP": {
+        "EDIT_USER": "Editar Usuário",
+        "DEL_USER": "Deletear Usuário"
+      }
+    },
+    "DIALOG_CONFIRM_DELETE": {
+      "TITLE": "Confirmar Exclusão",
+      "MESSAGE": "Deseja excluir o CPF: {{cpf}} ?"
+    },
+    "DIALOG_USER": {
+      "ADD_USER": "Cadastrar Usuário",
+      "EDIT_USER": "Editar CPF: {{cpf}}",
+      "FORM": {
+        "NAME": "Nome",
+        "EMAIL": "E-mail",
+        "CPF": "CPF",
+        "CPF_NUMBERS": "Apenas números",
+        "PHONE": "Telefone"
+      },
+      "PLACEHOLDER": {
+        "NAME": "Nome Completo",
+        "EMAIL": "E-mail",
+        "CPF": "CPF",
+        "PHONE": "Telefone"
+      },
+      "BTN": {
+        "ADD": "Cadastrar Usuário",
+        "EDIT": "Editar Usuário"
+      },
+      "ERRORS":{
+        "NAME": "Insira o nome",
+        "NAME_INVALID": "Insira um nome válido",
+        "EMAIL": "Insira o E-mail",
+        "EMAIL_INVALID": "Formato de E-mail Inválido",
+        "CPF": "Insira o CPF",
+        "CPF_LENGTH": "O CPF deve conter 11 números",
+        "PHONE": "Insira o Telefone",
+        "PHONE_LENGTH": "Insira um número de Telefone Válido"
+      }
+    },
+    "COMMON": {
+        "MESSAGES": {
+          "ADD_SUCESS": "Dados Salvos com Sucesso!",
+          "EDIT_SUCESS": "Dados Editados com Sucesso!",
+          "DEL_SUCESS": "Dado Removido com Sucesso",
+          "DEL_ERROR": "Erro ao Deletar Dados",
+          "ADD_ERROR": "Erro ao Salvar Dados!",
+          "EDIT_ERROR": "Erro ao Editar Dados!",
+          "YES": "Sim",
+          "NO": "Não"
+        }
+    }
+}
