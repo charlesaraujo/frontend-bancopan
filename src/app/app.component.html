@@ -1,0 +1,62 @@
+<!-- HEADER -->
+<div class="toolbar" role="banner">
+  <img width="25" alt="Banco pan logo" src="../assets/img/banco-pan-logo-p.png" />
+  <span>USUÁRIOS</span>
+  <div class="spacer"></div>
+  <a aria-label="WhatsApp Carlos Eduardo" target="_blank" rel="noopener"
+    href="https://www.linkedin.com/in/carlos-edu-teixeira" title="Linkedin Carlos Eduardo">
+    <img width="25" alt="Logo linkedin" src="../assets/img/logo-linkedin.png" />
+  </a>
+  <a aria-label="WhatsApp Carlos Eduardo" target="_blank" rel="noopener" href="https://wa.me/qr/G4ENH6WF2OMTO1"
+    title="WhatsApp Carlos Eduardo">
+    <img class="img-logo-whatsaap" id="img-logo-whatsapp" data-name="Logo" fill="#fff" width="30" alt="Logo whatsApp"
+      src="../assets/img/whatsapp-logo.png" />
+  </a>
+</div>
+
+<!-- BODY -->
+<div class="content" role="main">
+  <button class="btn-adc-usuario btn btn-primary" type="button" (click)="novoUsuario()" data-bs-toggle="modal"
+    data-bs-target="#myModal">
+    <span>Adicionar usuário</span>
+    <span>+</span>
+  </button>
+
+  <!-- CARD USUARIO -->
+  <div class="card-container">
+    <div *ngFor="let user of usuarios" class="card-container">
+      <div class="card card-small card-usuario" tabindex="0">
+        <div class="info-usuario">
+          <h5>{{ user.name }}</h5>
+          <p name="cpf" id="cpf">CPF: {{ user.cpf }}</p>
+          <p>Tel.: {{ user.phone }}</p>
+          <P>Email: {{ user.email }}</P>
+        </div>
+        <!-- BTN EDITAR USUARIO -->
+        <div class="div-btn-editar-excluir">
+          <button class="btn-editar" (click)="editarUsuario(user)">
+            <img width="25" alt="Angular Logo" src="../assets/img/icon-edit.svg" data-bs-toggle="modal"
+              data-bs-target="#myModal">
+          </button>
+          <!-- BTN DELETAR USUARIO -->
+          <button class="btn-excluir" (click)="excluirUsuario(user)">
+            <img width="25" alt="Angular Logo" src="../assets/img/icon-delete.svg">
+          </button>
+        </div>
+        <div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="hidden" #selection>
+
+  <button [hidden]="exibirBtnRemoverTodosUsuarios()" class="btn-remover-todos-usuarios btn btn-danger" type="button"
+    (click)="removerTodosUuarios()">
+    <span>REMOVER TODOS USUÁRIOS</span>
+  </button>
+
+  <app-modal-novo-usuario [isEnabledCpfToEdit]="isEnabledCpfToEdit" [btnRemoverTodosUsuarios]="btnRemoverTodosUsuarios">
+  </app-modal-novo-usuario>
+
+</div>

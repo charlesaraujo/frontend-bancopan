@@ -1,0 +1,67 @@
+<form [formGroup]="formularioNovoUsuario" (ngSubmit)="dadosNovoUsuario()">
+  <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="tituloModalNovoUsuario">{{tituloModal}}</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- <form> -->
+          <div class="mb-3">
+            <input placeholder="Nome completo" type="text" class="form-control" id="nameId" formControlName="name"
+              maxlength="60" [(ngModel)]="nameEdit">
+            <!-- MENSAGEM ERRO NOME INVALIDO -->
+            <div *ngIf="!name.pristine && name.errors">
+              <p class="msg-erro" *ngIf="name.errors.required">
+                Nome é obrigatório.
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input (blur)="msgCpfInvalido()" placeholder="CPF" type="text" class="form-control cpf" id="cpf"
+              [attr.disabled]="isEnabledCpfToEdit ? '' : null"  mask="000.000.000-00" formControlName="cpf"
+              [(ngModel)]="cpfEdit">
+            <div *ngIf="!cpf.pristine && cpf.errors">
+              <p class="msg-erro" *ngIf="cpf.errors.required">
+                CPF é obrigatório.
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input (blur)="msgTelefoneInvalido()" placeholder="Telefone" type="text" class="form-control " id="phone"
+              mask="(00) 0000-0000||(00) 0 0000-0000" minlength="10" formControlName="phone" [(ngModel)]="phoneEdit">
+            <!-- MENSAGEM ERRO TELEFONE INVALIDO -->
+            <div *ngIf="!phone.pristine && phone.errors">
+              <p class="msg-erro" *ngIf="phone.errors.minlength">
+                Telefone deve ter no mínimo DDD + 8 digitos
+              </p>
+              <p class="msg-erro" *ngIf="phone.errors.required">
+                Insira um número de telefone para prosseguir.
+              </p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <input placeholder="E-mail" type="text" class="form-control" id="emaiIdl" formControlName="email"
+              maxlength="80" [(ngModel)]="emailEdit">
+
+            <!-- MENSAGEM ERRO EMAIL INVALIDO -->
+            <div *ngIf="!email.pristine && email.errors">
+              <p class="msg-erro" *ngIf="email.errors.email">
+                Digite um e-mail válido.
+              </p>
+            </div>
+          </div>
+
+          <!-- </form> -->
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CANCELAR</button>
+          <button type="text" class="btn btn-primary" [disabled]="!formularioNovoUsuario.valid"
+            (click)="dadosNovoUsuario()" data-bs-toggle="modal" (keydown.enter)='dadosNovoUsuario()'>SALVAR</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</form>

@@ -1,55 +1,46 @@
-<img src="https://www.bancopan.com.br/bancopan-institucional/conteudo/estrutura/assets/img/mh-icons/mh-icon--logo-desktop.svg" width="120" alt="Banco Pan">
+# TesteFrontEndBancoPan
 
-# Front-end
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) versão 14.1.0.
 
-Bem-vindo(a) ao nosso teste para desenvolvedor(a) front-end.
+## Download projeto
 
-## Sobre o teste
+- Execute o download dos arquivos ou faça um `git clone` deste repositório.
 
-Nosso teste consiste em codificar uma interface baseado nas imagens a baixo:
+## Executar Localmente
 
-#### Home
+- 1 - Abra a pasta raiz do projeto, execute: `npm install`.
+- 2 - Execute `ng s` ou exemplo:`ng s --port 4200` para abrir na porta selecionada.
+- 3 - Navegue até `http://localhost:4200/`
 
-<img src="layout/home.png" width="400" alt="Banco Pan">
+## Acesso via web
 
-#### Cadastro
+- Acesse: `https://app-frontend-banco-pan.web.app/`
 
-<img src="layout/cadastro.png" width="400" alt="Banco Pan">
+## Servidor de desenvolvimento
 
-## Requisitos
+Execute `ng s` para um servidor dev. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
 
-### Requisitos obrigatórios
+## Ferramentas utilizadas
 
-- Documentação
-  - Instruções de instalação, inicialização e testes
-  - Descrição sobre as tecnologias utilizadas no projeto
-- Design responsivo
-- Use endpoint a seguir para pegar os dados iniciais dos usuários.
-  - GET: https://private-56d1e-charlesaraujodasilva.apiary-mock.com/users
-- Utilize os cookies ou localstorage como banco de dados.
-- Deve conter cadastro e remoção de usuário, edição é opcional.
-- Pelo menos uma estratégia para organização do CSS
+- BehaviorSubject da biblioteca RxJS.
+- angular-input-masks.
+- sweetalert2 // Modais de alerta.
 
-### Você pode
+## COMPODOC (gerador de documentação desenvolvido para projetos)
 
-- Utilizar qualquer framework JS moderno (Angular, React, Vue...)
-- Utilizar bibliotecas para o gerenciamento de estado (NGRX, Redux, Vuex...)
-- Utilizar pré ou pós-processadores de CSS, bem como frameworks e/ou starterpacks (Sass, PostCSS, CSS Modules, Styled Components...)
-- Alterar a proposta do layout caso necessário
+- Para executar a documetação: `compodoc -p tsconfig.doc.json -s`.
 
-### O que gostaríamos de ver
+## Fluxo e Validações inseridas no projeto
 
-- Apesar de frameworks e libs ajudarem muito no nosso dia a dia, gostaríamos muito mais de ver o seu código em Vanilla JS
-- Testes unitários, e2e e/ou coverage
-- Uma arquitetura consistente, focada na simplicidade do projeto
-- Justifique a utilização das tecnologias adotadas - quais foram os pontos positivos e negativos que elas trouxeram?
-
-### Por fim
-
-A ideia não é prescrever uma receita exata de como o desafio deve ser resolvido. Por isso, resolva-o da forma que achar melhor. O importante para nós é entender como você codifica uma interface e seu fluxo de trabalho. Além disso, considere que estamos à disposição para qualquer dúvida!
-
-Usamos o mesmo teste para todos os níveis: **Junior**, **Pleno** e **Senior**; mas procuramos adequar nossa exigência na avaliação com cada um desses níveis.
-
-## Entrega
-
-Para enviar seu código, você deve fazer um fork deste repositório, criar uma branch com o seu nome e enviar um pull request.
+- Ao carregar a aplicação, os 3 contatos ja disponiveis no endpoint são exibidos.
+- Na tela inicial na cor vermelha se encontra o botão "REMOVER TODOS USUÁRIOS", ao clicar é exibido um modal de confirmação e caso seja confirmado, é excluído os contatos exibidos e limpo o LocalStorage.
+- Para inserir novo usuário, clicar no botão "Adicionar usuário".
+- O formulário tem validações no campo de nome, cpf, telefone e email.
+    Campo nome: é obrigatório com limite de 60 caracteres.
+    Campo cpf: é obrigatório, com validação de CPF.
+    Campo telefone: é obrigatório, com validação de minimo de 10 caracteres(DDD+8 digitos para telefone fixo).
+    Campo email: é obrigatório, com validação padrão de email do @angular/forms.
+- Botão salvar fica desbilitado até que todos os campos estejam de acordo com as regras.
+- Após salvar uma mensagem de sucesso é exibida e o novo usuário é adicionado a grid.
+- Para atualizar o usuário adicionado ou outro ja cadastrado, basta clicar no icone de cor verde com icone de lápis. Um novo modal será exibido com os daos possiveis para edição. No modal de edição temos o campo de CPF definido como desabilitado para evitar a troca de CPF de usuário. Para salvar alteração basta cumprir com os critérios de validação para salvar a alteração.
+- Para DELETAR o usuário individualmente, basta clicar no ícone vermelho com desenho de lixeira, um modal de confirmação é exibido para excluir logo na sequencia.

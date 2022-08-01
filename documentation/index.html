@@ -1,0 +1,148 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>teste-front-end-banco-pan documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	   <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/dark.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">teste-front-end-banco-pan documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="testefrontendbancopan">TesteFrontEndBancoPan</h1>
+<p>Este projeto foi gerado com <a href="https://github.com/angular/angular-cli">Angular CLI</a> versão 14.1.0.</p>
+<h2 id="executar-localmente">Executar Localmente</h2>
+<ul>
+<li>1 - Abra a pasta raiz do projeto, execute: <code>npm install</code>.</li>
+<li>2 - Execute <code>ng s</code> ou exemplo:<code>ng s --port 4200</code> para abrir na porta selecionada.</li>
+<li>3 - Navegue até <code>http://localhost:4200/</code></li>
+</ul>
+<h2 id="servidor-de-desenvolvimento">Servidor de desenvolvimento</h2>
+<p>Execute <code>ng s</code> para um servidor dev. Navegue até <code>http://localhost:4200/</code>. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.</p>
+<h2 id="ferramentas-utilizadas">Ferramentas utilizadas</h2>
+<ul>
+<li>BehaviorSubject da biblioteca RxJS</li>
+<li>angular-input-masks</li>
+<li>sweetalert2 // Modais de alerta</li>
+</ul>
+<h2 id="compodoc-gerador-de-documentação-desenvolvido-para-projetos">COMPODOC (gerador de documentação desenvolvido para projetos)</h2>
+<ul>
+<li>compodoc -p tsconfig.doc.json -s</li>
+</ul>
+<h2 id="fluxo-e-validações-inseridas-no-projeto">Fluxo e Validações inseridas no projeto</h2>
+<ul>
+<li>Ao carregar a aplicação, os 3 contatos ja disponiveis no endpoint são exibidos.</li>
+<li>Na tela inicial na cor vermelha se encontra o botão &quot;REMOVER TODOS USUÁRIOS&quot;, ao clicar é exibido um modal de confirmação e caso seja confirmado, é excluído os contatos exibidos e limpo o LocalStorage.</li>
+<li>Para inserir novo usuário, clicar no botão &quot;Adicionar usuário&quot;.</li>
+<li>O formulário tem validações no campo de nome, cpf, telefone e email.
+  Campo nome: é obrigatório com limite de 60 caracteres.
+  Campo cpf: é obrigatório, com validação de CPF.
+  Campo telefone: é obrigatório, com validação de minimo de 10 caracteres(DDD+8 digitos para telefone fixo).
+  Campo email: é obrigatório, com validação padrão de email do @angular/forms.</li>
+<li>Botão salvar fica desbilitado até que todos os campos estejam de acordo com as regras.</li>
+<li>Após salvar uma mensagem de sucesso é exibida e o novo usuário é adicionado a grid.</li>
+<li>Para atualizar o usuário adicionado ou outro ja cadastrado, basta clicar no icone de cor verde com icone de lápis. Um novo modal será exibido com os daos possiveis para edição. No modal de edição temos o campo de CPF definido como desabilitado para evitar a troca de CPF de usuário. Para salvar alteração basta cumprir com os critérios de validação para salvar a alteração.</li>
+<li>Para DELETAR o usuário individualmente, basta clicar no ícone vermelho com desenho de lixeira, um modal de confirmação é exibido para excluir logo na sequencia.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+          <label class="dark-mode-switch">
+               <input type="checkbox">
+               <span class="slider">
+                    <svg class="slider-icon" viewBox="0 0 24 24" fill="none" height="20" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" width="20" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                    </svg>
+               </span>
+          </label>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+
+       <script src="./js/menu-wc.js" defer></script>
+       <script nomodule src="./js/menu-wc_es5.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
