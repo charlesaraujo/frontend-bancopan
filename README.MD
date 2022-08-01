@@ -12,6 +12,10 @@ Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
 - 2 - Execute `ng s` ou exemplo:`ng s --port 4200` para abrir na porta selecionada.
 - 3 - Navegue até `http://localhost:4200/`
 
+## Acesso via web
+
+- Acesse: `https://app-frontend-banco-pan.web.app/`
+
 ## Servidor de desenvolvimento
 
 Execute `ng s` para um servidor dev. Navegue até `http://localhost:4200/`. O aplicativo será recarregado automaticamente se você alterar qualquer um dos arquivos de origem.
